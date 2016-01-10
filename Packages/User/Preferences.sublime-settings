@@ -1,5 +1,7 @@
 {
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"font_size":14,
+	"theme": "Flatland Dark.sublime-theme",
+	"color_scheme": "Packages/User/SublimeLinter/Flatland Dark (SL).tmTheme",
 	"ignored_packages":
 	[
 		"Vintage"
