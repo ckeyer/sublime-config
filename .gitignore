@@ -1,5 +1,7 @@
+/Local
 /Index
 /Cache
 /Packages/User/GoSublime/osx-x64
+*.sublime_session
 *.sublime_session
 *.cache
