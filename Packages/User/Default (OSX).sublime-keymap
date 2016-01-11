@@ -1,0 +1,5 @@
+[
+	{ "keys": ["ctrl+z"], "command": "jump_back" },
+	{ "keys": ["ctrl+shift+z"], "command": "jump_forward" },
+	{ "keys": ["ctrl+j"], "command": "goto_definition" }
+]
