@@ -2,6 +2,8 @@
 /Index
 /Cache
 /Packages/User/GoSublime/osx-x64
+*.last-run
+*-run
 *.sublime_session
 *.sublime_session
 *.cache

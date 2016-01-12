@@ -7,8 +7,7 @@
 	// in values, $PATH and ${PATH} are replaced with
 	// the corresponding environment(PATH) variable, if it exists.
 	"env": {
-        "GOPATH": "/Users/ckeyer/code/go",
-        "PATH":"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go//bin:/Users/ckeyer/code/go/bin/:/usr/local/mysql/bin/:.:"
+        "GOPATH": "/Users/ckeyer/code/go"
 		},
 
 	// if set, whenever possible `GOPATH` will be set to `GS_GOPATH`.
@@ -214,7 +213,49 @@
 	// you maybe add field markers ($1, $2, etc) to the `value` string to dictate where the cursor is place
 	// once a completion is expanded and where it's placed once you press tab afterwards.
 	// duplicate markers e.g f("...", $1, $1) will result in multiple cursors, one for each duplication.
-	"snippets": [],
+	"snippets": [
+	 	{
+	        "match": {"global": true}, // these snippets will only be present in a function scope
+	        "snippets": [
+		        {"text": "println", "title": "println(...)", "value": "println($1)"},
+	            {
+	            	"text": "if err ?= nil",
+	            	"title": "if err{}",
+	            	"value": "if ${1:err} != ${2:nil} {\n\t${3:return}\n}"
+	            },
+	            {
+	            	"text": "for k,v range",
+	            	"title": "for range",
+	            	"value": "for ${2:k}, ${3:v} := range ${1:set} {\n\t$4\n}"
+	            },
+	            {
+	            	"text": "defer do",
+	            	"title": "defer ...",
+	            	"value": "defer $1"
+	            },
+	            {
+	            	"text": "defer func",
+	            	"title": "defer func()",
+	            	"value": "defer func(){\n\t$1\n}()"
+	            },
+	            {
+	            	"text": "recover",
+	            	"title": "recover",
+	            	"value": "if ${1:r}, ${2:ok} := recover(); ${2:ok} {\n\t$3\n}"
+	            },
+	            {
+	            	"text": "struct var",
+	            	"title": "var Type struct ...",
+	            	"value": "var $1 struct{\n\t${2:Name} ${3:Type},$4\n}"
+	            },
+	            {
+	            	"text": "struct type",
+	            	"title": "type Type struct ...",
+	            	"value": "type ${1:Name} struct{\n\t${2:Name} ${3:Type},$4\n}"
+	            }
+	        ]
+	    }
+	],
 
 	"default_snippets": [
 		{
