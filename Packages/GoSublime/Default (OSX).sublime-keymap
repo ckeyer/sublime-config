@@ -30,7 +30,7 @@
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 	{
-		"keys": ["super+.", "super+d"],
+		"keys": ["super+r"],
 		"command": "gs_palette",
 		"args": {"palette": "declarations", "direct": true},
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
