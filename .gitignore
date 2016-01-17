@@ -1,6 +1,7 @@
 /Local
 /Index
 /Cache
+/Backup
 /Packages/User/GoSublime/osx-x64
 *.last-run
 *-run
