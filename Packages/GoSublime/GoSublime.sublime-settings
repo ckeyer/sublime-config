@@ -252,6 +252,24 @@
 	            	"text": "struct type",
 	            	"title": "type Type struct ...",
 	            	"value": "type ${1:Name} struct{\n\t${2:Name} ${3:Type},$4\n}"
+	            },
+	            {
+	            	"text": "switch",
+	            	"title": "switch",
+	            	"value": "switch ${1:type} {\ncase ${2:branch}:\n\t${3:return}\n${4:...}\ndefault:\n\t$5\n}"
+	            },
+	            {
+	            	"text": "select",
+	            	"title": "select",
+	            	"value": "select { \ncase ${1:branch}:\n\t${2:return}\n${3:...}\ndefault:\n\t$4\n}"
+	            },
+	            {
+	            	"text": "case",
+	            	"title": "case",
+	            	"value": "case ${1:branch}:\n\t${2:...}\n"
+	            },
+	            {
+	            	"text": "fallthrough", "title": "fallthrough", "value": "fallthrough"
 	            }
 	        ]
 	    }
