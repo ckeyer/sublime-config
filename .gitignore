@@ -3,6 +3,7 @@
 /Cache
 /Backup
 /Packages/User/GoSublime/osx-x64
+*.merged-ca-bundle
 *.last-run
 *-run
 *.sublime_session
