@@ -246,12 +246,12 @@
 	            {
 	            	"text": "struct var",
 	            	"title": "var Type struct ...",
-	            	"value": "var $1 struct{\n\t${2:Name} ${3:Type},$4\n}"
+	            	"value": "var $1 struct{\n\t${2:Name} ${3:Type}\n}"
 	            },
 	            {
 	            	"text": "struct type",
 	            	"title": "type Type struct ...",
-	            	"value": "type ${1:Name} struct{\n\t${2:Name} ${3:Type},$4\n}"
+	            	"value": "type ${1:Name} struct{\n\t${2:Name} ${3:Type}\n}"
 	            },
 	            {
 	            	"text": "switch",
@@ -261,7 +261,7 @@
 	            {
 	            	"text": "select",
 	            	"title": "select",
-	            	"value": "select { \ncase ${1:branch}:\n\t${2:return}\n${3:...}\ndefault:\n\t$4\n}"
+	            	"value": "select {\ncase ${1:branch}:\n\t${2:return}\n${3:...}\ndefault:\n\t$4\n}"
 	            },
 	            {
 	            	"text": "case",
@@ -270,6 +270,9 @@
 	            },
 	            {
 	            	"text": "fallthrough", "title": "fallthrough", "value": "fallthrough"
+	            },
+	            {
+	            	"text": "interface", "title": "interface{}", "value": "interface{$1}"
 	            }
 	        ]
 	    }
