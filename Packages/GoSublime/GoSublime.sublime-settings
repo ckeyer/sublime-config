@@ -217,6 +217,11 @@
 	 	{
 	        "match": {"global": true}, // these snippets will only be present in a function scope
 	        "snippets": [
+		        {"text": "float32", "title": "float32", "value": "float32"},
+		        {"text": "float64", "title": "float64", "value": "float64"},
+		        {"text": "complex64", "title": "complex64", "value": "complex64"},
+		        {"text": "complex128", "title": "complex128", "value": "complex128"},
+	            {"text": "interface", "title": "interface{}", "value": "interface{$1}"},
 		        {"text": "println", "title": "println(...)", "value": "println($1)"},
 	            {
 	            	"text": "if err ?= nil",
@@ -270,9 +275,6 @@
 	            },
 	            {
 	            	"text": "fallthrough", "title": "fallthrough", "value": "fallthrough"
-	            },
-	            {
-	            	"text": "interface", "title": "interface{}", "value": "interface{$1}"
 	            }
 	        ]
 	    }
