@@ -16,6 +16,10 @@ if int(sublime.version()) >= 3000:
 else:
     from diff_match_patch.python2.diff_match_patch import diff_match_patch
 
+def print_debug(*msg):
+     if getSetting(sublime.active_window().active_view(), sublime.load_settings('phpfmt.sublime-settings'), "debug", False):
+        print(msg)
+
 def getSetting( view, settings, key, default ):
     local = 'phpfmt.' + key
     return view.settings().get( local, settings.get( key, default ) )
@@ -52,17 +56,13 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
 
     config_file = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "php.tools.ini")
 
-    dirnm = ""
-    uri = ""
-    if force is False:
-        uri = view.file_name()
-        dirnm, sfn = os.path.split(uri)
-        ext = os.path.splitext(uri)[1][1:]
+    uri = view.file_name()
+    dirnm, sfn = os.path.split(uri)
+    ext = os.path.splitext(uri)[1][1:]
 
-        if "php" != ext and not ext in additional_extensions:
-            if debug:
-                print("phpfmt: not a PHP file")
-            return False
+    if force is False and "php" != ext and not ext in additional_extensions:
+        print_debug("phpfmt: not a PHP file")
+        return False
 
     if "" != ignore_list:
         if type(ignore_list) is not list:
@@ -70,12 +70,11 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
         for v in ignore_list:
             pos = uri.find(v)
             if -1 != pos and v != "":
-                if debug:
-                    print("phpfmt: skipping file")
+                print_debug("phpfmt: skipping file")
                 return False
 
     if not os.path.isfile(php_bin) and not php_bin == "php":
-        print("Can't find PHP binary file at "+php_bin)
+        print_debug("Can't find PHP binary file at "+php_bin)
         if int(sublime.version()) >= 3000:
             sublime.error_message("Can't find PHP binary file at "+php_bin)
 
@@ -92,12 +91,10 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
                 break
 
         if not os.path.isfile(oracleFname):
-            if debug:
-                print("phpfmt (oracle file): not found")
+            print_debug("phpfmt (oracle file): not found")
             oracleFname = None
         else:
-            if debug:
-                print("phpfmt (oracle file): "+oracleFname)
+            print_debug("phpfmt (oracle file): "+oracleFname)
 
         if readini:
             iniDirNm = dirnm
@@ -111,12 +108,10 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
                     break
 
             if os.path.isfile(iniFname):
-                if debug:
-                    print("phpfmt (ini file): "+iniFname)
+                print_debug("phpfmt (ini file): "+iniFname)
                 config_file = iniFname
             elif skip_if_ini_missing:
-                if debug:
-                    print("phpfmt (ini file): not found - skipping")
+                print_debug("phpfmt (ini file): not found - skipping")
                 return False
     else:
         oracleFname = None
@@ -129,17 +124,16 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
     else:
         p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
     res, err = p.communicate()
-    print("phpfmt (php_ver) cmd:\n", cmd_ver)
-    print("phpfmt (php_ver) out:\n", res.decode('utf-8'))
-    print("phpfmt (php_ver) err:\n", err.decode('utf-8'))
+    print_debug("phpfmt (php_ver) cmd:\n", cmd_ver)
+    print_debug("phpfmt (php_ver) out:\n", res.decode('utf-8'))
+    print_debug("phpfmt (php_ver) err:\n", err.decode('utf-8'))
     if php55compat is False and ('PHP 5.3' in res.decode('utf-8') or 'PHP 5.3' in err.decode('utf-8') or 'PHP 5.4' in res.decode('utf-8') or 'PHP 5.4' in err.decode('utf-8') or 'PHP 5.5' in res.decode('utf-8') or 'PHP 5.5' in err.decode('utf-8')):
         s = debugEnvironment(php_bin, formatter_path)
         sublime.message_dialog('Warning.\nPHP 5.6 or newer is required.\nPlease, upgrade your local PHP installation.\nDebug information:'+s)
         return False
 
-    if debug:
-        s = debugEnvironment(php_bin, formatter_path)
-        print(s)
+    s = debugEnvironment(php_bin, formatter_path)
+    print_debug(s)
 
     lintret = 1
     if "AutoSemicolon" in passes:
@@ -228,8 +222,7 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
         else:
             cmd_fmt.append("-")
 
-        if debug:
-            print("cmd_fmt: ", cmd_fmt)
+        print_debug("cmd_fmt: ", cmd_fmt)
 
         if src is None:
             if os.name == 'nt':
@@ -251,9 +244,8 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
 
         res, err = p.communicate()
 
-        if debug:
-            print("p:\n", p.returncode)
-            print("err:\n", err.decode('utf-8'))
+        print_debug("p:\n", p.returncode)
+        print_debug("err:\n", err.decode('utf-8'))
 
         if p.returncode != 0:
             return ''
@@ -264,8 +256,7 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
         return res.decode('utf-8')
     else:
         sublime.status_message("phpfmt: format failed - syntax errors found")
-        if debug:
-            print("lint error: ", lint_out)
+        print_debug("lint error: ", lint_out)
 
 
 def dogeneratephpdoc(eself, eview):
@@ -301,21 +292,20 @@ def dogeneratephpdoc(eself, eview):
     ext = os.path.splitext(uri)[1][1:]
 
     if "php" != ext and not ext in additional_extensions:
-        print("phpfmt: not a PHP file")
+        print_debug("phpfmt: not a PHP file")
         sublime.status_message("phpfmt: not a PHP file")
         return False
 
     if not os.path.isfile(php_bin) and not php_bin == "php":
-        print("Can't find PHP binary file at "+php_bin)
+        print_debug("Can't find PHP binary file at "+php_bin)
         if int(sublime.version()) >= 3000:
             sublime.error_message("Can't find PHP binary file at "+php_bin)
 
-    if debug:
-        print("phpfmt:", uri)
-        if enable_auto_align:
-            print("auto align: enabled")
-        else:
-            print("auto align: disabled")
+    print_debug("phpfmt:", uri)
+    if enable_auto_align:
+        print_debug("auto align: enabled")
+    else:
+        print_debug("auto align: disabled")
 
 
 
@@ -365,8 +355,7 @@ def dogeneratephpdoc(eself, eview):
 
         uri_tmp = uri + "~"
 
-        if debug:
-            print("cmd_fmt: ", cmd_fmt)
+        print_debug("cmd_fmt: ", cmd_fmt)
 
         if os.name == 'nt':
             startupinfo = subprocess.STARTUPINFO()
@@ -375,10 +364,10 @@ def dogeneratephpdoc(eself, eview):
         else:
             p = subprocess.Popen(cmd_fmt, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False)
         res, err = p.communicate()
-        print("err:\n", err.decode('utf-8'))
+        print_debug("err:\n", err.decode('utf-8'))
         sublime.set_timeout(revert_active_window, 50)
     else:
-        print("lint error: ", lint_out)
+        print_debug("lint error: ", lint_out)
 
 def doreordermethod(eself, eview):
     self = eself
@@ -413,21 +402,21 @@ def doreordermethod(eself, eview):
     ext = os.path.splitext(uri)[1][1:]
 
     if "php" != ext and not ext in additional_extensions:
-        print("phpfmt: not a PHP file")
+        print_debug("phpfmt: not a PHP file")
         sublime.status_message("phpfmt: not a PHP file")
         return False
 
     if not os.path.isfile(php_bin) and not php_bin == "php":
-        print("Can't find PHP binary file at "+php_bin)
+        print_debug("Can't find PHP binary file at "+php_bin)
         if int(sublime.version()) >= 3000:
             sublime.error_message("Can't find PHP binary file at "+php_bin)
 
-    if debug:
-        print("phpfmt:", uri)
-        if enable_auto_align:
-            print("auto align: enabled")
-        else:
-            print("auto align: disabled")
+
+    print_debug("phpfmt:", uri)
+    if enable_auto_align:
+        print_debug("auto align: enabled")
+    else:
+        print_debug("auto align: disabled")
 
 
 
@@ -477,8 +466,7 @@ def doreordermethod(eself, eview):
 
         uri_tmp = uri + "~"
 
-        if debug:
-            print("cmd_fmt: ", cmd_fmt)
+        print_debug("cmd_fmt: ", cmd_fmt)
 
         if os.name == 'nt':
             startupinfo = subprocess.STARTUPINFO()
@@ -487,10 +475,10 @@ def doreordermethod(eself, eview):
         else:
             p = subprocess.Popen(cmd_fmt, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False)
         res, err = p.communicate()
-        print("err:\n", err.decode('utf-8'))
+        print_debug("err:\n", err.decode('utf-8'))
         sublime.set_timeout(revert_active_window, 50)
     else:
-        print("lint error: ", lint_out)
+        print_debug("lint error: ", lint_out)
 
 
 def dorefactor(eself, eview, refactor_from = None, refactor_to = None):
@@ -516,12 +504,12 @@ def dorefactor(eself, eview, refactor_from = None, refactor_to = None):
     ext = os.path.splitext(uri)[1][1:]
 
     if "php" != ext and not ext in additional_extensions:
-        print("phpfmt: not a PHP file")
+        print_debug("phpfmt: not a PHP file")
         sublime.status_message("phpfmt: not a PHP file")
         return False
 
     if not os.path.isfile(php_bin) and not php_bin == "php":
-        print("Can't find PHP binary file at "+php_bin)
+        print_debug("Can't find PHP binary file at "+php_bin)
         if int(sublime.version()) >= 3000:
             sublime.error_message("Can't find PHP binary file at "+php_bin)
 
@@ -549,8 +537,7 @@ def dorefactor(eself, eview, refactor_from = None, refactor_to = None):
 
         uri_tmp = uri + "~"
 
-        if debug:
-            print("cmd_refactor: ", cmd_refactor)
+        print_debug("cmd_refactor: ", cmd_refactor)
 
         if os.name == 'nt':
             startupinfo = subprocess.STARTUPINFO()
@@ -559,19 +546,18 @@ def dorefactor(eself, eview, refactor_from = None, refactor_to = None):
         else:
             p = subprocess.Popen(cmd_refactor, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False)
         res, err = p.communicate()
-        print("err:\n", err.decode('utf-8'))
+        print_debug("err:\n", err.decode('utf-8'))
         if int(sublime.version()) < 3000:
             with open(uri_tmp, 'w+') as f:
                 f.write(res)
         else:
             with open(uri_tmp, 'bw+') as f:
                 f.write(res)
-        if debug:
-            print("Stored:", len(res), "bytes")
+        print_debug("Stored:", len(res), "bytes")
         shutil.move(uri_tmp, uri)
         sublime.set_timeout(revert_active_window, 50)
     else:
-        print("lint error: ", lint_out)
+        print_debug("lint error: ", lint_out)
 
 def debugEnvironment(php_bin, formatter_path):
     ret = ""
@@ -696,7 +682,7 @@ class AnalyseThisCommand(sublime_plugin.TextCommand):
         cmdOracle.append(oraclePath)
         cmdOracle.append("introspect")
         cmdOracle.append(lookTerm)
-        print(cmdOracle)
+        print_debug(cmdOracle+'asdasd')
         if os.name == 'nt':
             startupinfo = subprocess.STARTUPINFO()
             startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
@@ -705,8 +691,8 @@ class AnalyseThisCommand(sublime_plugin.TextCommand):
             p = subprocess.Popen(cmdOracle, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=oracleDirNm, shell=False)
         res, err = p.communicate()
 
-        print("phpfmt (introspect): "+res.decode('utf-8'))
-        print("phpfmt (introspect) err: "+err.decode('utf-8'))
+        print_debug("phpfmt (introspect): "+res.decode('utf-8'))
+        print_debug("phpfmt (introspect) err: "+err.decode('utf-8'))
 
         outputToPanel("phpfmtintrospect", self, edit, "Analysis:\n"+res.decode('utf-8'));
 
@@ -792,7 +778,7 @@ class FmtNowCommand(sublime_plugin.TextCommand):
             return False
 
         _, err = merge(self.view, vsize, src, edit)
-        print(err)
+        print_debug(err)
 
 class TogglePassMenuCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -804,7 +790,7 @@ class TogglePassMenuCommand(sublime_plugin.TextCommand):
             formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.8.9.0.phar")
 
         cmd_passes = [php_bin,formatter_path,'--list-simple'];
-        print(cmd_passes)
+        print_debug(cmd_passes)
 
         if os.name == 'nt':
             startupinfo = subprocess.STARTUPINFO()
@@ -829,12 +815,12 @@ class TogglePassMenuCommand(sublime_plugin.TextCommand):
                 if option in passes:
                     passes.remove(option)
                     msg = "phpfmt: "+passDesc+" disabled"
-                    print(msg)
+                    print_debug(msg)
                     sublime.status_message(msg)
                 else:
                     passes.append(option)
                     msg = "phpfmt: "+passDesc+" enabled"
-                    print(msg)
+                    print_debug(msg)
                     sublime.status_message(msg)
 
                 s.set('passes', passes)
@@ -852,7 +838,7 @@ class ToggleExcludeMenuCommand(sublime_plugin.TextCommand):
             formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.8.9.0.phar")
 
         cmd_passes = [php_bin,formatter_path,'--list-simple'];
-        print(cmd_passes)
+        print_debug(cmd_passes)
 
         if os.name == 'nt':
             startupinfo = subprocess.STARTUPINFO()
@@ -877,12 +863,12 @@ class ToggleExcludeMenuCommand(sublime_plugin.TextCommand):
                 if option in excludes:
                     excludes.remove(option)
                     msg = "phpfmt: "+passDesc+" disabled"
-                    print(msg)
+                    print_debug(msg)
                     sublime.status_message(msg)
                 else:
                     excludes.append(option)
                     msg = "phpfmt: "+passDesc+" enabled"
-                    print(msg)
+                    print_debug(msg)
                     sublime.status_message(msg)
 
                 s.set('excludes', excludes)
@@ -914,15 +900,24 @@ class ToggleCommand(sublime_plugin.TextCommand):
         if value:
             s.set(option, False)
             msg = "phpfmt: "+options[option]+" disabled"
-            print(msg)
+            print_debug(msg)
             sublime.status_message(msg)
         else:
             s.set(option, True)
             msg = "phpfmt: "+options[option]+" enabled"
-            print(msg)
+            print_debug(msg)
             sublime.status_message(msg)
 
         sublime.save_settings('phpfmt.sublime-settings')
+
+class UpdatePhpBinCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        def execute(text):
+            s = sublime.load_settings('phpfmt.sublime-settings')
+            s.set("php_bin", text)
+
+        s = sublime.load_settings('phpfmt.sublime-settings')
+        self.view.window().show_input_panel('Refactor From:', s.get("php_bin", ""), execute, None, None)
 
 class RefactorCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -942,7 +937,7 @@ class RefactorCommand(sublime_plugin.TextCommand):
         additional_extensions = s.get("additional_extensions", [])
 
         if "php" != ext and not ext in additional_extensions:
-            print("phpfmt: not a PHP file")
+            print_debug("phpfmt: not a PHP file")
             sublime.status_message("phpfmt: not a PHP file")
             return False
 
@@ -992,8 +987,8 @@ class BuildOracleCommand(sublime_plugin.TextCommand):
             else:
                 p = subprocess.Popen(cmdOracle, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=self.dirNm, shell=False)
             res, err = p.communicate()
-            print("phpfmt (oracle): "+res.decode('utf-8'))
-            print("phpfmt (oracle) err: "+err.decode('utf-8'))
+            print_debug("phpfmt (oracle): "+res.decode('utf-8'))
+            print_debug("phpfmt (oracle) err: "+err.decode('utf-8'))
             sublime.status_message("phpfmt (oracle): done")
 
 
@@ -1024,13 +1019,13 @@ class BuildOracleCommand(sublime_plugin.TextCommand):
 
         self.msgFile = None
         if not os.path.isfile(oracleFname):
-            print("phpfmt (oracle file): not found -- dialog")
+            print_debug("phpfmt (oracle file): not found -- dialog")
             self.msgFile = self.view.window().open_file(os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "message"))
             self.msgFile.set_read_only(True)
             self.view.window().show_input_panel('location:', originalDirNm, askForDirectory, None, None)
         else:
-            print("phpfmt (oracle file): "+oracleFname)
-            print("phpfmt (oracle dir): "+oracleDirNm)
+            print_debug("phpfmt (oracle file): "+oracleFname)
+            print_debug("phpfmt (oracle dir): "+oracleDirNm)
             self.dirNm = oracleDirNm
             if int(sublime.version()) >= 3000:
                 sublime.set_timeout_async(buildDB, 0)
@@ -1072,7 +1067,7 @@ class PHPFmtComplete(sublime_plugin.EventListener):
             return []
 
 
-        print("phpfmt (autocomplete): "+prefix);
+        print_debug("phpfmt (autocomplete): "+prefix);
 
         comps = []
 
@@ -1106,7 +1101,7 @@ class PHPFmtComplete(sublime_plugin.EventListener):
             ))
 
         if prefix in "class":
-            print("class guess")
+            print_debug("class guess")
             className = sfn.split(".")[0]
             comps.append((
                 '%s \t %s \t %s' % ("class", className, "class"),
@@ -1119,7 +1114,7 @@ class PHPFmtComplete(sublime_plugin.EventListener):
         cmdOracle.append(oraclePath)
         cmdOracle.append("autocomplete")
         cmdOracle.append(prefix)
-        print(cmdOracle)
+        print_debug(cmdOracle)
         if os.name == 'nt':
             startupinfo = subprocess.STARTUPINFO()
             startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
@@ -1127,7 +1122,7 @@ class PHPFmtComplete(sublime_plugin.EventListener):
         else:
             p = subprocess.Popen(cmdOracle, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=oracleDirNm, shell=False)
         res, err = p.communicate()
-        print("phpfmt (autocomplete) err: "+err.decode('utf-8'))
+        print_debug("phpfmt (autocomplete) err: "+err.decode('utf-8'))
 
         f = res.decode('utf-8').split('\n')
         reader = csv.reader(f, delimiter=',')
@@ -1157,13 +1152,13 @@ sublime.save_settings('phpfmt.sublime-settings')
 
 if version == 2:
     # Convert to version 3
-    print("Convert to version 3")
+    print_debug("Convert to version 3")
     s.set('version', 3)
     sublime.save_settings('phpfmt.sublime-settings')
 
 if version == 3:
     # Convert to version 3
-    print("Convert to version 4")
+    print_debug("Convert to version 4")
     s.set('version', 4)
     passes = s.get('passes', [])
     passes.append("ReindentSwitchBlocks")
@@ -1176,7 +1171,7 @@ if version == 3:
 #     php_bin = s.get("php_bin", "php")
 #     formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
 
-#     print("Selfupdate")
+#     print_debug("Selfupdate")
 #     cmd_update = [php_bin, formatter_path, '--selfupdate']
 #     if os.name == 'nt':
 #         startupinfo = subprocess.STARTUPINFO()
@@ -1213,7 +1208,7 @@ class PhpFmtCommand(sublime_plugin.TextCommand):
             return False
 
         _, err = merge(self.view, vsize, src, edit)
-        print(err)
+        print_debug(err)
 
 class MergeException(Exception):
     pass
