@@ -261,20 +261,30 @@
 	            {
 	            	"text": "switch",
 	            	"title": "switch",
-	            	"value": "switch ${1:type} {\ncase ${2:branch}:\n\t${3:return}\n${4:...}\ndefault:\n\t$5\n}"
+	            	"value": "switch ${1:type} {\ncase ${2:branch}:\n\t${3:return}\n$4\ndefault:\n\t$5\n}"
 	            },
 	            {
 	            	"text": "select",
 	            	"title": "select",
-	            	"value": "select {\ncase ${1:branch}:\n\t${2:return}\n${3:...}\ndefault:\n\t$4\n}"
+	            	"value": "select {\ncase ${1:branch}:\n\t${2:return}\n$3\ndefault:\n\t$4\n}"
 	            },
 	            {
 	            	"text": "case",
 	            	"title": "case",
-	            	"value": "case ${1:branch}:\n\t${2:...}\n"
+	            	"value": "case ${1:branch}:\n\t$2\n"
 	            },
 	            {
 	            	"text": "fallthrough", "title": "fallthrough", "value": "fallthrough"
+	            },
+	            {
+	            	"text": "test",
+	            	"title": "Test{}", 
+	            	"value": "func Test$1(${2:t} *testing.T) {\n\t$3\n}"
+	            },
+	            {
+	            	"text": "benchmark",
+	            	"title": "Benchmark{}", 
+	            	"value": "func Benchmark$1(${2:b} *testing.B) {\n\t$3\n}"
 	            }
 	        ]
 	    }
