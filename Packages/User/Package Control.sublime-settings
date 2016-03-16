@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Anaconda",
+		"Babel",
 		"BracketHighlighter",
 		"C Improved",
 		"DocBlockr",
@@ -13,12 +14,17 @@
 		"Godef",
 		"GoImports",
 		"GoSublime",
+		"JsFormat",
 		"JSON-Template",
 		"Package Control",
 		"phpfmt",
+		"Protocol Buffer Syntax",
 		"QML",
 		"SublimeLinter",
+		"SublimeLinter-jsxhint",
 		"Tag",
-		"Theme - Flatland"
+		"Theme - Flatland",
+		"Vue Syntax Highlight",
+		"Vuejs Complete Package"
 	]
 }

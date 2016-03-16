@@ -222,6 +222,8 @@
 		        {"text": "complex64", "title": "complex64", "value": "complex64"},
 		        {"text": "complex128", "title": "complex128", "value": "complex128"},
 	            {"text": "interface", "title": "interface{}", "value": "interface{$1}"},
+		        {"text": "return ", "title": "return", "value": "return $1"},
+		        {"text": "continue", "title": "continue", "value": "continue"},
 		        {"text": "println", "title": "println(...)", "value": "println($1)"},
 	            {
 	            	"text": "if err ?= nil",
