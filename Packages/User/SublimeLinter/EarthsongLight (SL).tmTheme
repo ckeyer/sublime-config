@@ -356,8 +356,10 @@
 			<string>markup.changed</string>
 			<key>settings</key>
 			<dict>
+				<key>background</key>
+				<string>#C4B14A</string>
 				<key>foreground</key>
-				<string>#E6DB74</string>
+				<string>#72AACA</string>
 			</dict>
 		</dict>
 
@@ -380,7 +382,7 @@
 			</dict>
 		</dict>
 
-	<dict>
+		<dict>
             <key>name</key>
             <string>SublimeLinter Warning</string>
             <key>scope</key>
