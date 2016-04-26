@@ -1,10 +1,12 @@
 {
-	"color_scheme": "Packages/User/SublimeLinter/EarthsongLight (SL).tmTheme",
+	// "color_scheme": "Packages/User/SublimeLinter/EarthsongLight (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Flatland Dark (SL).tmTheme",
 	"default_line_ending": "unix",
 	"font_size": 14,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"theme": "Reeder.sublime-theme"
+	// "theme": "Reeder.sublime-theme"
+	"theme": "Flatland Dark.sublime-theme"
 }
