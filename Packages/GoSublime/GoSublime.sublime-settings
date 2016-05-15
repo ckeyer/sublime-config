@@ -1,14 +1,12 @@
 {
 	// The maximum amount of memory(MiB) that MarGo is allowed to use
-	"margo_oom": 10000,
+	"margo_oom": 1000,
 
 	// you may set specific environment variables here
 	// e.g "env": { "PATH": "$HOME/go/bin:$PATH" }
 	// in values, $PATH and ${PATH} are replaced with
 	// the corresponding environment(PATH) variable, if it exists.
-	"env": {
-        "GOPATH": "/Users/ckeyer/code/go"
-		},
+	"env": {},
 
 	// if set, whenever possible `GOPATH` will be set to `GS_GOPATH`.
 	// please see `Usage & Tips` `ctrl+dot,ctrl+2`
@@ -43,10 +41,18 @@
 
 	// by default fmt'ing is done by margo using `fmt_tab_intent` and `fmt_tab_width` (above)
 	// you may use a command of your choosing by setting `fmt_cmd`
-	// e.g. ["goimports"]
+	// e.g. ["goimports", "-srcdir", "$_dir"]
 	// the command will be passed, to its stdin, the contents of the file
 	// it must output the new file contents
+	//
+	// You might need to increase `ipc_timeout` below if you use this setting.
+	// If `fmt_cmd` takes too long, the internal MarGo fmt will be tried instead.
 	"fmt_cmd": [],
+
+	// ipc_timeout sets the maximum amount of time time in seconds to wait for a blocking ipc call to MarGo.
+	// Due to limitations in Sublime Text, fmt cannot be done without freezing Sublime Text.
+	// If you use the `fmt_cmd` setting above with a command that is slow like `goimports` you should increase this value.
+	"ipc_timeout": 1,
 
 	// Whether or not gslint is enabled
 	"gslint_enabled": true,
@@ -213,84 +219,7 @@
 	// you maybe add field markers ($1, $2, etc) to the `value` string to dictate where the cursor is place
 	// once a completion is expanded and where it's placed once you press tab afterwards.
 	// duplicate markers e.g f("...", $1, $1) will result in multiple cursors, one for each duplication.
-	"snippets": [
-	 	{
-	        "match": {"global": true}, // these snippets will only be present in a function scope
-	        "snippets": [
-		        {"text": "float32", "title": "float32", "value": "float32"},
-		        {"text": "float64", "title": "float64", "value": "float64"},
-		        {"text": "complex64", "title": "complex64", "value": "complex64"},
-		        {"text": "complex128", "title": "complex128", "value": "complex128"},
-	            {"text": "interface", "title": "interface{}", "value": "interface{$1}"},
-		        {"text": "return ", "title": "return", "value": "return $1"},
-		        {"text": "continue", "title": "continue", "value": "continue"},
-		        {"text": "println", "title": "println(...)", "value": "println($1)"},
-	            {
-	            	"text": "if err ?= nil",
-	            	"title": "if err{}",
-	            	"value": "if ${1:err} != ${2:nil} {\n\t${3:return}\n}"
-	            },
-	            {
-	            	"text": "for k,v range",
-	            	"title": "for range",
-	            	"value": "for ${2:k}, ${3:v} := range ${1:set} {\n\t$4\n}"
-	            },
-	            {
-	            	"text": "defer do",
-	            	"title": "defer ...",
-	            	"value": "defer $1"
-	            },
-	            {
-	            	"text": "defer func",
-	            	"title": "defer func()",
-	            	"value": "defer func(){\n\t$1\n}()"
-	            },
-	            {
-	            	"text": "recover",
-	            	"title": "recover",
-	            	"value": "if ${1:r}, ${2:ok} := recover(); ${2:ok} {\n\t$3\n}"
-	            },
-	            {
-	            	"text": "struct var",
-	            	"title": "var Type struct ...",
-	            	"value": "var $1 struct{\n\t${2:Name} ${3:Type}\n}"
-	            },
-	            {
-	            	"text": "struct type",
-	            	"title": "type Type struct ...",
-	            	"value": "type ${1:Name} struct{\n\t${2:Name} ${3:Type}\n}"
-	            },
-	            {
-	            	"text": "switch",
-	            	"title": "switch",
-	            	"value": "switch ${1:type} {\ncase ${2:branch}:\n\t${3:return}\n$4\ndefault:\n\t$5\n}"
-	            },
-	            {
-	            	"text": "select",
-	            	"title": "select",
-	            	"value": "select {\ncase ${1:branch}:\n\t${2:return}\n$3\ndefault:\n\t$4\n}"
-	            },
-	            {
-	            	"text": "case",
-	            	"title": "case",
-	            	"value": "case ${1:branch}:\n\t$2\n"
-	            },
-	            {
-	            	"text": "fallthrough", "title": "fallthrough", "value": "fallthrough"
-	            },
-	            {
-	            	"text": "test",
-	            	"title": "Test{}", 
-	            	"value": "func Test$1(${2:t} *testing.T) {\n\t$3\n}"
-	            },
-	            {
-	            	"text": "benchmark",
-	            	"title": "Benchmark{}", 
-	            	"value": "func Benchmark$1(${2:b} *testing.B) {\n\t$3\n}"
-	            }
-	        ]
-	    }
-	],
+	"snippets": [],
 
 	"default_snippets": [
 		{
