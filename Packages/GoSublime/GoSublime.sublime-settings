@@ -236,6 +236,11 @@
 	            	"value": "for ${2:k}, ${3:v} := range ${1:set} {\n\t$4\n}"
 	            },
 	            {
+	            	"text": "go func",
+	            	"title": "go func()",
+	            	"value": "go func($1) $2 {\n\t$3\n}($4)"
+	            },
+	            {
 	            	"text": "defer do",
 	            	"title": "defer ...",
 	            	"value": "defer $1"
