@@ -15,7 +15,6 @@
 		"GoImports",
 		"GoSublime",
 		"JsFormat",
-		"JSON-Template",
 		"Package Control",
 		"Protocol Buffer Syntax",
 		"QML",
@@ -28,7 +27,6 @@
 		"SublimeLinter-jsxhint",
 		"Tag",
 		"Theme - Flatland",
-		"Vue Syntax Highlight",
-		"Vuejs Complete Package"
+		"Vue Syntax Highlight"
 	]
 }
