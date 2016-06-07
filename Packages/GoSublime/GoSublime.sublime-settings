@@ -228,7 +228,7 @@
 	            {
 	            	"text": "if err ?= nil",
 	            	"title": "if err{}",
-	            	"value": "if ${1:err} != ${2:nil} {\n\t${3:return}\n}"
+	            	"value": "if ${1:err} != ${2:nil} {\n\t$3\n\treturn $4\n}"
 	            },
 	            {
 	            	"text": "for k,v range",
