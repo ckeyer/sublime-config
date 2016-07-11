@@ -253,7 +253,7 @@
 	            {
 	            	"text": "recover",
 	            	"title": "recover",
-	            	"value": "if ${1:r}, ${2:ok} := recover(); ${2:ok} {\n\t$3\n}"
+	            	"value": "if ${1:r} := recover(); ${1:r} != nil {\n\t$3\n}"
 	            },
 	            {
 	            	"text": "struct var",
