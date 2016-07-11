@@ -4,7 +4,7 @@
 /Backup
 /Packages/User/GoSublime/osx-x64
 **.merged-ca-bundle
-**.last-run
+**/*.last-run
 **-run
 **.sublime_session
 **.sublime_session

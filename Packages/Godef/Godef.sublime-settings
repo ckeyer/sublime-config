@@ -3,7 +3,7 @@
 	// Set your real GOPATH in user's Godef.sublime-settings
 	// For example:
 	"goroot": "/usr/local/go",
-	"gopath": "/Users/ckeyer/code/go"
+	"gopath": "/Users/ckeyer/go"
 	// or if you use windows
 	// "goroot": "C:\\Go",
 	// "gopath": "C:\\gopath",
