@@ -7,6 +7,7 @@
 	// in values, $PATH and ${PATH} are replaced with
 	// the corresponding environment(PATH) variable, if it exists.
 	"env": {
+        // "CGO_ENABLED": 0,
         "GOPATH": "/Users/ckeyer/go"
 		},
 
