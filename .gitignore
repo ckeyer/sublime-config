@@ -2,7 +2,10 @@
 /Index
 /Cache
 /Backup
-/Packages/User/GoSublime/osx-x64
+Packages/User/GoSublime/osx-x64
+Packages/User/oscrypto-ca-bundle.crt
+Packages/User/Package\ Control.last-run
+Packages/User/Package\ Control.merged-ca-bundle
 **.merged-ca-bundle
 **/*.last-run
 **-run

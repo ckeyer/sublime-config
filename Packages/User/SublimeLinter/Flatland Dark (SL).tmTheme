@@ -23,7 +23,7 @@
 				<string>#7a8288</string>
 
 				<key>lineHighlight</key>
-				<string>#aaa454</string>
+				<string>#aa66666a</string>
 
 				<key>selection</key>
 				<string>#aa6666</string>
@@ -35,7 +35,7 @@
 				<string>#3C3F42</string>
 
 				<key>gutterForeground</key>
-				<string>#73797b75</string>
+				<string>#03797bf5</string>
 
 				<key>guide</key>
 				<string>#73797b30</string>
