@@ -229,7 +229,7 @@
 	            {
 	            	"text": "if err ?= nil",
 	            	"title": "if err{}",
-	            	"value": "if ${1:err} != ${2:nil} {\n\t$3\n\treturn $4\n}"
+	            	"value": "if ${1:err} != ${2:nil} { $3\n\treturn $4\n}"
 	            },
 	            {
 	            	"text": "for k,v range",
@@ -259,27 +259,27 @@
 	            {
 	            	"text": "struct var",
 	            	"title": "var Type struct ...",
-	            	"value": "var $1 struct{\n\t${2:Name} ${3:Type}\n}"
+	            	"value": "var $1 struct{\n\t${2:Name} ${3:string}\n}"
 	            },
 	            {
 	            	"text": "struct type",
 	            	"title": "type Type struct ...",
-	            	"value": "type ${1:Name} struct{\n\t${2:Name} ${3:Type}\n}"
+	            	"value": "type ${1:Name} struct{\n\t${2:Name} ${3:string}\n}"
 	            },
 	            {
 	            	"text": "switch",
 	            	"title": "switch",
-	            	"value": "switch ${1:type} {\ncase ${2:branch}:\n\t${3:return}\n$4\ndefault:\n\t$5\n}"
+	            	"value": "switch ${1:type} {\ncase ${2:branch}: $3\ndefault:\n\t$4\n}"
 	            },
 	            {
 	            	"text": "select",
 	            	"title": "select",
-	            	"value": "select {\ncase ${1:branch}:\n\t${2:return}\n$3\ndefault:\n\t$4\n}"
+	            	"value": "select {\ncase ${1:branch}: $2\ndefault:\n\t$3\n}"
 	            },
 	            {
 	            	"text": "case",
 	            	"title": "case",
-	            	"value": "case ${1:branch}:\n\t$2\n"
+	            	"value": "case ${1:branch}: $2"
 	            },
 	            {
 	            	"text": "fallthrough", "title": "fallthrough", "value": "fallthrough"
