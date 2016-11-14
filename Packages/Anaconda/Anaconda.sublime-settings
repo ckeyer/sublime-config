@@ -278,16 +278,15 @@
     /*
         If 'outline' (default) anaconda will outline error lines
         If 'fill' anaconda will fill the lines
+        If 'solid_underline' anaconda will draw a solid underline below regions
+        If 'stippled_underline' anaconda will draw a stippled underline below regions
+        If 'squiggly_underline' anaconda will draw a squiggly underline below regions
         If 'none' anaconda will not draw anything on error lines
     */
     "anaconda_linter_mark_style": "outline",
 
     /*
-        If anaconda_linter_mark_style is set to none and this is set to false,
-        anaconda will not underline errors
-
-        If anaconda_linter_mark_style is set to anything else, this option is
-        ignored
+        If this is set to false, anaconda will not underline errors
     */
     "anaconda_linter_underlines": true,
 
@@ -451,6 +450,11 @@
     "mypy": false,
 
     /*
+        Set the following variable to set MyPy MYPYPATH
+     */
+    "mypy_mypypath": "",
+
+    /*
     	MyPy Silent Imports
 
     	If true don't follow imports to .py files
@@ -612,5 +616,12 @@
 
     	NOTE: Ignore errors is dangerous do it under your own responsibility
      */
+
+     /* Parameters to include after test_command specific to testing scope */
+     "test_params": {
+        "current_file_tests": "",
+        "current_test": "",
+        "project_tests": ""
+    },
 	"swallow_startup_errors": false
 }
