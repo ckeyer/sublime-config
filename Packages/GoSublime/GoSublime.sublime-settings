@@ -226,6 +226,7 @@
 		        {"text": "return ", "title": "return", "value": "return $1"},
 		        {"text": "continue", "title": "continue", "value": "continue"},
 		        {"text": "println", "title": "println(...)", "value": "println($1)"},
+		        {"text": "append", "title": "append(...)", "value": "append(${1:ss}, ${2:...})"},
 	            {
 	            	"text": "if err ?= nil",
 	            	"title": "if err{}",
