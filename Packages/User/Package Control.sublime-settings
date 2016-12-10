@@ -6,6 +6,8 @@
 	"installed_packages":
 	[
 		"Anaconda",
+		"Angular2 HTML Syntax",
+		"AngularJS",
 		"Babel",
 		"BracketHighlighter",
 		"C Improved",
@@ -26,6 +28,7 @@
 		"ReactJS",
 		"ReactJS Snippets",
 		"SCSS",
+		"SCSS Snippets",
 		"SublimeLinter",
 		"SublimeLinter-jsxhint",
 		"Tag",
