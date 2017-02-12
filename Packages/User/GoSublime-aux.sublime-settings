@@ -3,6 +3,10 @@
 	[
 		"go run"
 	],
+	"9o.hist./Users/ckeyer/go/src/test":
+	[
+		"go run flushreader.go"
+	],
 	"ann": "a16.07.09-1",
 	"install_version": "r16.07.09-1",
 	"version": "r16.07.09-1"
