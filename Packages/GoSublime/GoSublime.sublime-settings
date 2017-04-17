@@ -8,8 +8,8 @@
 	// the corresponding environment(PATH) variable, if it exists.
 	"env": {
         // "CGO_ENABLED": 0,
-        "GOROOT": "/usr/local/go",
-        "GOPATH": "/Users/ckeyer/go"
+        "GOROOT": "D:\\Go",
+		"GOPATH": "D:\\gopath"
 		},
 
 	// if set, whenever possible `GOPATH` will be set to `GS_GOPATH`.

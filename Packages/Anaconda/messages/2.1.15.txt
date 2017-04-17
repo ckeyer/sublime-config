@@ -6,12 +6,16 @@
                                      The Sublime Text 3 Python IDE
 
 
-Anaconda v2.1.13
+Anaconda v2.1.15
 ================
 
-Welcome to new anaconda v2.1.13, what do you can find in this minor release?
+Welcome to new anaconda v2.1.15, what do you can find in this minor release?
+
+## Fixes
+    - Added support for MyPy `in-development` versions
 
 ## Improvements
+    - Added `ids` to menu entries to support Localication
 
-    - Made css template for anaconda tooltips theme agnostic
-
+## New Features
+    - Added support to display linting errors inline using phantoms (disable by default)

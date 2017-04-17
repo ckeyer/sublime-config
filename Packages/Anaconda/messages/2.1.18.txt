@@ -6,12 +6,10 @@
                                      The Sublime Text 3 Python IDE
 
 
-Anaconda v2.1.13
+Anaconda v2.1.18
 ================
 
-Welcome to new anaconda v2.1.13, what do you can find in this minor release?
+Welcome to new anaconda v2.1.18, what do you can find in this minor release?
 
-## Improvements
-
-    - Made css template for anaconda tooltips theme agnostic
-
+## Rollbacks
+    - Rollback latest Jedi update as it introduced some performance issues

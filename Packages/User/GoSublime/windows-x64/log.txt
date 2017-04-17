@@ -1,0 +1,1295 @@
+
+** 2017-03-14 22:52:16.121948 **:
+MarGo: MarGo build failed
+cmd: `['', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+
+`
+exception: `Cannot find command `go``
+--------------------------------
+
+** 2017-03-14 22:52:16.153144 **:
+MarGo: Missing required environment variables: GOROOT GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2017-03-14 22:54:08.906496 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+
+** 2017-03-14 23:00:09.059350 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+
+** 2017-03-14 23:11:34.661050 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+
+** 2017-03-14 23:12:52.969546 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+
+** 2017-03-14 23:13:40.019429 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+
+** 2017-03-14 23:14:51.702877 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+Gocode pkg: "github.com/kubernetes/kubernetes/pkg/api"
+Gocode env: gocode.margoEnv{LibPath:"D:\\Go\\pkg\\windows_amd64;C:\\Users\\chuanjian\\code\\go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"D:\\Go\\", GOPATH:"C:\\Users\\chuanjian\\code\\go", InstallSuffix:""}
+margo: 2017/03/20 23:28:14 broker.go:105: gocode_calltip#mg9.autoken.607e1d2d-75fd-46ca-8f29-0aec1db22560 PANIC: One of the package cache updaters panicked
+goroutine 57 [running]:
+disposa.blue/cmd/margo_pkg.(*Broker).call.func1(0xc04212a000, 0xc04211d260)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:104 +0xc9
+panic(0x850220, 0xc0423c61d0)
+	D:/Go/src/runtime/panic.go:489 +0x2dd
+disposa.blue/something-borrowed/gocode.update_packages(0xc042301858)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:382 +0x1f6
+disposa.blue/something-borrowed/gocode.(*auto_complete_context).update_caches(0xc0420f23c0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:166 +0x1e8
+disposa.blue/something-borrowed/gocode.(*auto_complete_context).apropos(0xc0420f23c0, 0xc0422e2000, 0xb75, 0xc00, 0xc042108000, 0x54, 0x50d, 0x1, 0x1, 0xc042108000, ...)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:303 +0x1ed
+disposa.blue/something-borrowed/gocode.(*margoState).Complete(0xc042068dc0, 0x1, 0x0, 0x0, 0xc0420fc230, 0x6, 0xc0420fd260, 0x1, 0x1, 0xc0422e2000, ...)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/gosublime_gocode_bridge.go:78 +0x14d
+disposa.blue/cmd/margo_pkg.(*mGocode).completions(0xc042058200, 0xc0422e2000, 0xb75, 0xc00, 0xc042108000, 0x54, 0x50d, 0x0, 0xc00, 0xc0422e2000)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:95 +0x14b
+disposa.blue/cmd/margo_pkg.(*mGocode).calltips(0xc042058200, 0xc0422e2000, 0xb75, 0xc00, 0xc042108000, 0x54, 0x505, 0xc04208ec00, 0x454190, 0xc04208ec00)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:105 +0x1df
+disposa.blue/cmd/margo_pkg.(*mGocode).Call(0xc042058200, 0x90b6f0, 0xc04212a000, 0xc04211d260, 0xc0420ee1e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:74 +0x18f
+disposa.blue/cmd/margo_pkg.(*Broker).call(0xc04211d260, 0xc04212a000, 0xae2d60, 0xc042058200)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:113 +0xa1
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:188 +0xe1
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 1 [syscall, locked to thread]:
+syscall.Syscall6(0x777e0990, 0x5, 0x764, 0xc042126000, 0x1000, 0xc0422c177c, 0x0, 0x0, 0x454190, 0xc042026800, ...)
+	D:/Go/src/runtime/syscall_windows.go:174 +0x6b
+syscall.ReadFile(0x764, 0xc042126000, 0x1000, 0x1000, 0xc0422c177c, 0x0, 0xc0422c1798, 0xc0422c1790)
+	D:/Go/src/syscall/zsyscall_windows.go:311 +0xe6
+syscall.Read(0x764, 0xc042126000, 0x1000, 0x1000, 0xc04208ec00, 0x454190, 0xc04208ec00)
+	D:/Go/src/syscall/syscall_windows.go:296 +0x6f
+os.(*File).read(0xc042004010, 0xc042126000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	D:/Go/src/os/file_windows.go:289 +0xd0
+os.(*File).Read(0xc042004010, 0xc042126000, 0x1000, 0x1000, 0x454190, 0xc04208ec00, 0xc0420ee1e0)
+	D:/Go/src/os/file.go:101 +0x7d
+bufio.(*Reader).fill(0xc042012480)
+	D:/Go/src/bufio/bufio.go:97 +0x11e
+bufio.(*Reader).ReadSlice(0xc042012480, 0xc0422c1a0a, 0xc0422c1978, 0x4fa2aa, 0xc0422c19b0, 0x0, 0xc042058200)
+	D:/Go/src/bufio/bufio.go:338 +0xc2
+bufio.(*Reader).ReadBytes(0xc042012480, 0xc04201390a, 0xc0422c1af8, 0x0, 0x0, 0x0, 0x0)
+	D:/Go/src/bufio/bufio.go:416 +0x6d
+disposa.blue/cmd/margo_pkg.(*Broker).accept(0xc04211d260, 0xc042013920, 0xc04211d200)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:128 +0x53
+disposa.blue/cmd/margo_pkg.(*Broker).Loop(0xc04211d260, 0x900001)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:213 +0x152
+disposa.blue/cmd/margo_pkg.Main()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:140 +0x71f
+main.main()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo/main.go:8 +0x27
+
+goroutine 6 [chan receive]:
+disposa.blue/cmd/margo_pkg.init.2.func1()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/g_autoinst.go:114 +0x93
+created by disposa.blue/cmd/margo_pkg.init.2
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/g_autoinst.go:117 +0x3c
+
+goroutine 50 [runnable, locked to thread]:
+syscall.Syscall6(0x777e0990, 0x5, 0x190, 0xc0464d0000, 0x20830, 0xc04208dcec, 0x0, 0x0, 0x454190, 0xc042030c00, ...)
+	D:/Go/src/runtime/syscall_windows.go:174 +0x6b
+syscall.ReadFile(0x190, 0xc0464d0000, 0x20830, 0x20830, 0xc04208dcec, 0x0, 0xc04208dd08, 0xc04208dd00)
+	D:/Go/src/syscall/zsyscall_windows.go:311 +0xe6
+syscall.Read(0x190, 0xc0464d0000, 0x20830, 0x20830, 0x41114d, 0xc042084368, 0xc0423bf6c0)
+	D:/Go/src/syscall/syscall_windows.go:296 +0x6f
+os.(*File).read(0xc04231a038, 0xc0464d0000, 0x20830, 0x20830, 0x0, 0x0, 0x0)
+	D:/Go/src/os/file_windows.go:289 +0xd0
+os.(*File).Read(0xc04231a038, 0xc0464d0000, 0x20830, 0x20830, 0x42bbc5, 0xc0423bf6d8, 0x90c108)
+	D:/Go/src/os/file.go:101 +0x7d
+bytes.(*Buffer).ReadFrom(0xc04208de50, 0xae3d20, 0xc04231a038, 0xc0464d0000, 0x0, 0x20830)
+	D:/Go/src/bytes/buffer.go:179 +0x167
+io/ioutil.readAll(0xae3d20, 0xc04231a038, 0x20830, 0x0, 0x0, 0x0, 0x0, 0x0)
+	D:/Go/src/io/ioutil/ioutil.go:33 +0x157
+io/ioutil.ReadFile(0xc0423f69c0, 0x21, 0x0, 0x0, 0x0, 0x0, 0x0)
+	D:/Go/src/io/ioutil/ioutil.go:70 +0xfe
+disposa.blue/something-borrowed/gocode.new_file_reader.func1(0xc0420f8018)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/utils.go:177 +0xca
+created by disposa.blue/something-borrowed/gocode.new_file_reader
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/utils.go:180 +0x91
+
+goroutine 34 [sleep, locked to thread]:
+time.Sleep(0x77359400)
+	D:/Go/src/runtime/time.go:59 +0x107
+disposa.blue/cmd/margo_pkg.startOomKiller.func1(0x2710)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/oom.go:31 +0x156
+created by disposa.blue/cmd/margo_pkg.startOomKiller
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/oom.go:33 +0x46
+
+goroutine 35 [sleep]:
+time.Sleep(0x6fc23ac00)
+	D:/Go/src/runtime/time.go:59 +0x107
+disposa.blue/cmd/margo_pkg.Main.func1(0x6fc23ac00, 0xc04211d260, 0xc042082140)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:122 +0x51
+created by disposa.blue/cmd/margo_pkg.Main
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:131 +0x83c
+
+goroutine 36 [chan receive]:
+disposa.blue/cmd/margo_pkg.Main.func2(0xc04211d260)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:135 +0x8c
+created by disposa.blue/cmd/margo_pkg.Main
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:138 +0x6f1
+
+goroutine 52 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 53 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 54 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 55 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 56 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 58 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 59 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 60 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 61 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 62 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 63 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 64 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 65 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 66 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 67 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 68 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 69 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 70 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 71 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04211d260, 0xc042082940, 0xc042013920)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 241 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04229d280)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0420129c0, 0xc04229d280)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 242 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04229d300)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0420129c0, 0xc04229d300)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 243 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04229d340)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0420129c0, 0xc04229d340)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 244 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0423be0c0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0420129c0, 0xc0423be0c0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 245 [chan receive]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0423be180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x1b4
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0420129c0, 0xc0423be180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 246 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04229d2c0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0420129c0, 0xc04229d2c0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 247 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0423be000)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0420129c0, 0xc0423be000)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 248 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0423be040)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0420129c0, 0xc0423be040)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 249 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0423be080)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0420129c0, 0xc0423be080)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+
+Gocode pkg: "github.com/kubernetes/kubernetes/pkg/api"
+Gocode env: gocode.margoEnv{LibPath:"D:\\Go\\pkg\\windows_amd64;C:\\Users\\chuanjian\\code\\go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"D:\\Go\\", GOPATH:"C:\\Users\\chuanjian\\code\\go", InstallSuffix:""}
+margo: 2017/03/20 23:54:26 broker.go:105: gocode_calltip#mg9.autoken.ab8374ba-554a-4f91-a4e3-bd8840406e5a PANIC: One of the package cache updaters panicked
+goroutine 44 [running]:
+disposa.blue/cmd/margo_pkg.(*Broker).call.func1(0xc0420a8400, 0xc04212a7e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:104 +0xc9
+panic(0x850220, 0xc042082630)
+	D:/Go/src/runtime/panic.go:489 +0x2dd
+disposa.blue/something-borrowed/gocode.update_packages(0xc0422b3858)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:382 +0x1f6
+disposa.blue/something-borrowed/gocode.(*auto_complete_context).update_caches(0xc04209d940)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:166 +0x1e8
+disposa.blue/something-borrowed/gocode.(*auto_complete_context).apropos(0xc04209d940, 0xc04229b800, 0xb75, 0xc00, 0xc0420100c0, 0x54, 0x49c, 0x1, 0x1, 0xc0420100c0, ...)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:303 +0x1ed
+disposa.blue/something-borrowed/gocode.(*margoState).Complete(0xc0420b2d10, 0x1, 0x0, 0x0, 0xc0420844da, 0x6, 0xc0420830f0, 0x1, 0x1, 0xc04229b800, ...)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/gosublime_gocode_bridge.go:78 +0x14d
+disposa.blue/cmd/margo_pkg.(*mGocode).completions(0xc04208c080, 0xc04229b800, 0xb75, 0xc00, 0xc0420100c0, 0x54, 0x49c, 0x0, 0xc00, 0xc04229b800)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:95 +0x14b
+disposa.blue/cmd/margo_pkg.(*mGocode).calltips(0xc04208c080, 0xc04229b800, 0xb75, 0xc00, 0xc0420100c0, 0x54, 0x497, 0x42c29d, 0x0, 0x4110ad)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:105 +0x1df
+disposa.blue/cmd/margo_pkg.(*mGocode).Call(0xc04208c080, 0x90b6f0, 0xc0420a8400, 0xc04212a7e0, 0xc04200c460)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:74 +0x18f
+disposa.blue/cmd/margo_pkg.(*Broker).call(0xc04212a7e0, 0xc0420a8400, 0xae2d60, 0xc04208c080)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:113 +0xa1
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:188 +0xe1
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 1 [syscall, locked to thread]:
+syscall.Syscall6(0x777e0990, 0x5, 0x328, 0xc042142000, 0x1000, 0xc0422a977c, 0x0, 0x0, 0x3, 0x3, ...)
+	D:/Go/src/runtime/syscall_windows.go:174 +0x6b
+syscall.ReadFile(0x328, 0xc042142000, 0x1000, 0x1000, 0xc0422a977c, 0x0, 0xc0422a9798, 0xc0422a9790)
+	D:/Go/src/syscall/zsyscall_windows.go:311 +0xe6
+syscall.Read(0x328, 0xc042142000, 0x1000, 0x1000, 0xc042027800, 0x454190, 0xc042027800)
+	D:/Go/src/syscall/syscall_windows.go:296 +0x6f
+os.(*File).read(0xc042062000, 0xc042142000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	D:/Go/src/os/file_windows.go:289 +0xd0
+os.(*File).Read(0xc042062000, 0xc042142000, 0x1000, 0x1000, 0x454190, 0xc042027800, 0xc04200c4b0)
+	D:/Go/src/os/file.go:101 +0x7d
+bufio.(*Reader).fill(0xc042094480)
+	D:/Go/src/bufio/bufio.go:97 +0x11e
+bufio.(*Reader).ReadSlice(0xc042094480, 0xc0422a9a0a, 0xc0422a9978, 0x4fa2aa, 0xc0422a99b0, 0x0, 0xc0421200a0)
+	D:/Go/src/bufio/bufio.go:338 +0xc2
+bufio.(*Reader).ReadBytes(0xc042094480, 0xc04209410a, 0xc0422a9af8, 0x0, 0x0, 0x0, 0x0)
+	D:/Go/src/bufio/bufio.go:416 +0x6d
+disposa.blue/cmd/margo_pkg.(*Broker).accept(0xc04212a7e0, 0xc042094180, 0xc04212a700)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:128 +0x53
+disposa.blue/cmd/margo_pkg.(*Broker).Loop(0xc04212a7e0, 0x900001)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:213 +0x152
+disposa.blue/cmd/margo_pkg.Main()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:140 +0x71f
+main.main()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo/main.go:8 +0x27
+
+goroutine 22 [chan receive]:
+disposa.blue/cmd/margo_pkg.init.2.func1()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/g_autoinst.go:114 +0x93
+created by disposa.blue/cmd/margo_pkg.init.2
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/g_autoinst.go:117 +0x3c
+
+goroutine 21 [runnable, locked to thread]:
+syscall.Syscall6(0x777e0990, 0x5, 0x178, 0xc046418000, 0x39808, 0xc0420c7cec, 0x0, 0x0, 0x454190, 0xc042319400, ...)
+	D:/Go/src/runtime/syscall_windows.go:174 +0x6b
+syscall.ReadFile(0x178, 0xc046418000, 0x39808, 0x39808, 0xc0420c7cec, 0x0, 0xc0420c7d08, 0xc0420c7d00)
+	D:/Go/src/syscall/zsyscall_windows.go:311 +0xe6
+syscall.Read(0x178, 0xc046418000, 0x39808, 0x39808, 0x41114d, 0xc042078508, 0xc042050100)
+	D:/Go/src/syscall/syscall_windows.go:296 +0x6f
+os.(*File).read(0xc0420040a0, 0xc046418000, 0x39808, 0x39808, 0x0, 0x0, 0x0)
+	D:/Go/src/os/file_windows.go:289 +0xd0
+os.(*File).Read(0xc0420040a0, 0xc046418000, 0x39808, 0x39808, 0x42bbc5, 0xc042050118, 0x90c108)
+	D:/Go/src/os/file.go:101 +0x7d
+bytes.(*Buffer).ReadFrom(0xc0420c7e50, 0xae3d20, 0xc0420040a0, 0xc046418000, 0x0, 0x39808)
+	D:/Go/src/bytes/buffer.go:179 +0x167
+io/ioutil.readAll(0xae3d20, 0xc0420040a0, 0x39808, 0x0, 0x0, 0x0, 0x0, 0x0)
+	D:/Go/src/io/ioutil/ioutil.go:33 +0x157
+io/ioutil.ReadFile(0xc042260ed0, 0x21, 0x0, 0x0, 0x0, 0x0, 0x0)
+	D:/Go/src/io/ioutil/ioutil.go:70 +0xfe
+disposa.blue/something-borrowed/gocode.new_file_reader.func1(0xc042004150)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/utils.go:177 +0xca
+created by disposa.blue/something-borrowed/gocode.new_file_reader
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/utils.go:180 +0x91
+
+goroutine 36 [sleep, locked to thread]:
+time.Sleep(0x77359400)
+	D:/Go/src/runtime/time.go:59 +0x107
+disposa.blue/cmd/margo_pkg.startOomKiller.func1(0x2710)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/oom.go:31 +0x156
+created by disposa.blue/cmd/margo_pkg.startOomKiller
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/oom.go:33 +0x46
+
+goroutine 37 [sleep]:
+time.Sleep(0x6fc23ac00)
+	D:/Go/src/runtime/time.go:59 +0x107
+disposa.blue/cmd/margo_pkg.Main.func1(0x6fc23ac00, 0xc04212a7e0, 0xc042084380)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:122 +0x51
+created by disposa.blue/cmd/margo_pkg.Main
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:131 +0x83c
+
+goroutine 38 [chan receive]:
+disposa.blue/cmd/margo_pkg.Main.func2(0xc04212a7e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:135 +0x8c
+created by disposa.blue/cmd/margo_pkg.Main
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:138 +0x6f1
+
+goroutine 41 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 42 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 43 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 45 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 46 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 47 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 48 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 65 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 66 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 67 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 68 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 69 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 70 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 71 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 72 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 73 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 74 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 75 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 76 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc04212a7e0, 0xc0420821e0, 0xc042094180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 30 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0422d2840)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc042010900, 0xc0422d2840)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 29 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0422d2800)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc042010900, 0xc0422d2800)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 28 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0422d27c0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc042010900, 0xc0422d27c0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 27 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04200e880)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc042010900, 0xc04200e880)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 26 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04200e840)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc042010900, 0xc04200e840)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 31 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04200e940)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc042010900, 0xc04200e940)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 32 [chan receive]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04200ea40)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x1b4
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc042010900, 0xc04200ea40)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 97 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0422d2740)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc042010900, 0xc0422d2740)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 98 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0422d2780)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc042010900, 0xc0422d2780)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+
+Gocode pkg: "github.com/kubernetes/kubernetes/pkg/api"
+Gocode env: gocode.margoEnv{LibPath:"D:\\Go\\pkg\\windows_amd64;C:\\Users\\chuanjian\\code\\go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"D:\\Go\\", GOPATH:"C:\\Users\\chuanjian\\code\\go", InstallSuffix:""}
+margo: 2017/04/17 20:06:44 broker.go:105: gocode_calltip#mg9.autoken.1f72f317-a422-4389-a130-8246eeecf42e PANIC: One of the package cache updaters panicked
+goroutine 81 [running]:
+disposa.blue/cmd/margo_pkg.(*Broker).call.func1(0xc0422c6060, 0xc042114930)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:104 +0xc9
+panic(0x850220, 0xc04244c220)
+	D:/Go/src/runtime/panic.go:489 +0x2dd
+disposa.blue/something-borrowed/gocode.update_packages(0xc0423cf858)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:382 +0x1f6
+disposa.blue/something-borrowed/gocode.(*auto_complete_context).update_caches(0xc0420fc280)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:166 +0x1e8
+disposa.blue/something-borrowed/gocode.(*auto_complete_context).apropos(0xc0420fc280, 0xc042295800, 0xb75, 0xc00, 0xc0420127e0, 0x54, 0x66a, 0x1, 0x1, 0xc0420127e0, ...)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:303 +0x1ed
+disposa.blue/something-borrowed/gocode.(*margoState).Complete(0xc042068fd0, 0x1, 0x0, 0x0, 0xc0420f03e0, 0x6, 0xc0420f1530, 0x1, 0x1, 0xc042295800, ...)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/gosublime_gocode_bridge.go:78 +0x14d
+disposa.blue/cmd/margo_pkg.(*mGocode).completions(0xc042058200, 0xc042295800, 0xb75, 0xc00, 0xc0420127e0, 0x54, 0x66a, 0x0, 0xc00, 0xc042295800)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:95 +0x14b
+disposa.blue/cmd/margo_pkg.(*mGocode).calltips(0xc042058200, 0xc042295800, 0xb75, 0xc00, 0xc0420127e0, 0x54, 0x671, 0x42c29d, 0xc0422c89c0, 0xc0420810b0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:105 +0x1df
+disposa.blue/cmd/margo_pkg.(*mGocode).Call(0xc042058200, 0x90b6f0, 0xc0422c6060, 0xc042114930, 0xc04208eb90)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:74 +0x18f
+disposa.blue/cmd/margo_pkg.(*Broker).call(0xc042114930, 0xc0422c6060, 0xae2d60, 0xc042058200)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:113 +0xa1
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:188 +0xe1
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 1 [syscall, locked to thread]:
+syscall.Syscall6(0x76b30990, 0x5, 0x2f4, 0xc04202e000, 0x1000, 0xc04236377c, 0x0, 0x0, 0x454190, 0xc042026800, ...)
+	D:/Go/src/runtime/syscall_windows.go:174 +0x6b
+syscall.ReadFile(0x2f4, 0xc04202e000, 0x1000, 0x1000, 0xc04236377c, 0x0, 0xc042363798, 0xc042363790)
+	D:/Go/src/syscall/zsyscall_windows.go:311 +0xe6
+syscall.Read(0x2f4, 0xc04202e000, 0x1000, 0x1000, 0xc042363850, 0x8, 0x850220)
+	D:/Go/src/syscall/syscall_windows.go:296 +0x6f
+os.(*File).read(0xc042004010, 0xc04202e000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	D:/Go/src/os/file_windows.go:289 +0xd0
+os.(*File).Read(0xc042004010, 0xc04202e000, 0x1000, 0x1000, 0xc0422ba058, 0xc042363890, 0x4faaef)
+	D:/Go/src/os/file.go:101 +0x7d
+bufio.(*Reader).fill(0xc042012480)
+	D:/Go/src/bufio/bufio.go:97 +0x11e
+bufio.(*Reader).ReadSlice(0xc042012480, 0xc0420f200a, 0xc042363988, 0x4fa281, 0xc0422ba028, 0x832f00, 0xc0420f2060)
+	D:/Go/src/bufio/bufio.go:338 +0xc2
+bufio.(*Reader).ReadBytes(0xc042012480, 0x832f0a, 0xc0420f2060, 0xe89, 0xe89, 0x0, 0x0)
+	D:/Go/src/bufio/bufio.go:416 +0x6d
+disposa.blue/cmd/margo_pkg.(*Broker).accept(0xc042114930, 0xc0420139e0, 0xc042114900)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:128 +0x53
+disposa.blue/cmd/margo_pkg.(*Broker).Loop(0xc042114930, 0x900001)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:213 +0x152
+disposa.blue/cmd/margo_pkg.Main()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:140 +0x71f
+main.main()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo/main.go:8 +0x27
+
+goroutine 8 [syscall, locked to thread]:
+syscall.Syscall6(0x76b30990, 0x5, 0x188, 0xc046526000, 0x20830, 0xc0420a1cec, 0x0, 0x0, 0x454190, 0xc0422cb800, ...)
+	D:/Go/src/runtime/syscall_windows.go:174 +0x6b
+syscall.ReadFile(0x188, 0xc046526000, 0x20830, 0x20830, 0xc0420a1cec, 0x0, 0xc0420a1d08, 0xc0420a1d00)
+	D:/Go/src/syscall/zsyscall_windows.go:311 +0xe6
+syscall.Read(0x188, 0xc046526000, 0x20830, 0x20830, 0x41114d, 0xc04201d6e8, 0xc0420fca00)
+	D:/Go/src/syscall/syscall_windows.go:296 +0x6f
+os.(*File).read(0xc04244e008, 0xc046526000, 0x20830, 0x20830, 0x0, 0x0, 0x0)
+	D:/Go/src/os/file_windows.go:289 +0xd0
+os.(*File).Read(0xc04244e008, 0xc046526000, 0x20830, 0x20830, 0x42bbc5, 0xc0420fca18, 0x90c108)
+	D:/Go/src/os/file.go:101 +0x7d
+bytes.(*Buffer).ReadFrom(0xc0420a1e50, 0xae3d20, 0xc04244e008, 0xc046526000, 0x0, 0x20830)
+	D:/Go/src/bytes/buffer.go:179 +0x167
+io/ioutil.readAll(0xae3d20, 0xc04244e008, 0x20830, 0x0, 0x0, 0x0, 0x0, 0x0)
+	D:/Go/src/io/ioutil/ioutil.go:33 +0x157
+io/ioutil.ReadFile(0xc0424a0600, 0x21, 0x0, 0x0, 0x0, 0x0, 0x0)
+	D:/Go/src/io/ioutil/ioutil.go:70 +0xfe
+disposa.blue/something-borrowed/gocode.new_file_reader.func1(0xc0420f2158)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/utils.go:177 +0xca
+created by disposa.blue/something-borrowed/gocode.new_file_reader
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/utils.go:180 +0x91
+
+goroutine 34 [chan receive]:
+disposa.blue/cmd/margo_pkg.init.2.func1()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/g_autoinst.go:114 +0x93
+created by disposa.blue/cmd/margo_pkg.init.2
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/g_autoinst.go:117 +0x3c
+
+goroutine 35 [semacquire, locked to thread]:
+runtime.ReadMemStats(0xc04213a8d0)
+	D:/Go/src/runtime/mstats.go:444 +0x3d
+disposa.blue/cmd/margo_pkg.startOomKiller.func1(0x2710)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/oom.go:25 +0x12e
+created by disposa.blue/cmd/margo_pkg.startOomKiller
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/oom.go:33 +0x46
+
+goroutine 36 [sleep]:
+time.Sleep(0x6fc23ac00)
+	D:/Go/src/runtime/time.go:59 +0x107
+disposa.blue/cmd/margo_pkg.Main.func1(0x6fc23ac00, 0xc042114930, 0xc0420fa150)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:122 +0x51
+created by disposa.blue/cmd/margo_pkg.Main
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:131 +0x83c
+
+goroutine 37 [chan receive, 3 minutes]:
+disposa.blue/cmd/margo_pkg.Main.func2(0xc042114930)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:135 +0x8c
+created by disposa.blue/cmd/margo_pkg.Main
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:138 +0x6f1
+
+goroutine 12 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 13 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 14 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 15 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 16 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 65 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 66 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 67 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 68 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 69 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 70 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 71 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 72 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 73 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 74 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 75 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 76 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 77 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 78 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042114930, 0xc0420faaa0, 0xc0420139e0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 1475 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0422862c0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422c4060, 0xc0422862c0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 1476 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc042286300)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422c4060, 0xc042286300)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 1474 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc042287c80)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422c4060, 0xc042287c80)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 1473 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc042287c40)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422c4060, 0xc042287c40)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 1456 [chan receive]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc042286500)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x1b4
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422c4060, 0xc042286500)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 1454 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc042286380)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422c4060, 0xc042286380)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 1453 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc042286280)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422c4060, 0xc042286280)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 1452 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc042287d00)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422c4060, 0xc042287d00)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 1451 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc042287cc0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422c4060, 0xc042287cc0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+
+Gocode pkg: "github.com/kubernetes/kubernetes/pkg/api"
+Gocode env: gocode.margoEnv{LibPath:"D:\\Go\\pkg\\windows_amd64;C:\\Users\\chuanjian\\code\\go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"D:\\Go\\", GOPATH:"C:\\Users\\chuanjian\\code\\go", InstallSuffix:""}
+margo: 2017/04/17 20:16:55 broker.go:105: gocode_calltip#mg9.autoken.6bc7bfc8-e1bd-471e-a7c5-bad4cc43b826 PANIC: One of the package cache updaters panicked
+goroutine 38 [running]:
+disposa.blue/cmd/margo_pkg.(*Broker).call.func1(0xc0420d19a0, 0xc042086230)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:104 +0xc9
+panic(0x850220, 0xc042330180)
+	D:/Go/src/runtime/panic.go:489 +0x2dd
+disposa.blue/something-borrowed/gocode.update_packages(0xc0422d1858)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:382 +0x1f6
+disposa.blue/something-borrowed/gocode.(*auto_complete_context).update_caches(0xc042008b80)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:166 +0x1e8
+disposa.blue/something-borrowed/gocode.(*auto_complete_context).apropos(0xc042008b80, 0xc042296c00, 0xb75, 0xc00, 0xc042098420, 0x54, 0x5e9, 0x1, 0x1, 0xc042098420, ...)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:303 +0x1ed
+disposa.blue/something-borrowed/gocode.(*margoState).Complete(0xc0420700b0, 0x1, 0x0, 0x0, 0xc0420782f0, 0x6, 0xc042079290, 0x1, 0x1, 0xc042296c00, ...)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/gosublime_gocode_bridge.go:78 +0x14d
+disposa.blue/cmd/margo_pkg.(*mGocode).completions(0xc042058180, 0xc042296c00, 0xb75, 0xc00, 0xc042098420, 0x54, 0x5e9, 0x0, 0xc00, 0xc042296c00)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:95 +0x14b
+disposa.blue/cmd/margo_pkg.(*mGocode).calltips(0xc042058180, 0xc042296c00, 0xb75, 0xc00, 0xc042098420, 0x54, 0x5f5, 0xc042026800, 0x454190, 0xc042026800)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:105 +0x1df
+disposa.blue/cmd/margo_pkg.(*mGocode).Call(0xc042058180, 0x90b6f0, 0xc0420d19a0, 0xc042086230, 0xc042012320)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/m_gocode.go:74 +0x18f
+disposa.blue/cmd/margo_pkg.(*Broker).call(0xc042086230, 0xc0420d19a0, 0xae2d60, 0xc042058180)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:113 +0xa1
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:188 +0xe1
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 1 [syscall, locked to thread]:
+syscall.Syscall6(0x76b30990, 0x5, 0x2e4, 0xc04214a000, 0x1000, 0xc04202f77c, 0x0, 0x0, 0x454190, 0xc042026c00, ...)
+	D:/Go/src/runtime/syscall_windows.go:174 +0x6b
+syscall.ReadFile(0x2e4, 0xc04214a000, 0x1000, 0x1000, 0xc04202f77c, 0x0, 0xc04202f798, 0xc04202f790)
+	D:/Go/src/syscall/zsyscall_windows.go:311 +0xe6
+syscall.Read(0x2e4, 0xc04214a000, 0x1000, 0x1000, 0xc042026800, 0x454190, 0xc042026800)
+	D:/Go/src/syscall/syscall_windows.go:296 +0x6f
+os.(*File).read(0xc042004010, 0xc04214a000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	D:/Go/src/os/file_windows.go:289 +0xd0
+os.(*File).Read(0xc042004010, 0xc04214a000, 0x1000, 0x1000, 0x454190, 0xc042026800, 0xc042012320)
+	D:/Go/src/os/file.go:101 +0x7d
+bufio.(*Reader).fill(0xc042098540)
+	D:/Go/src/bufio/bufio.go:97 +0x11e
+bufio.(*Reader).ReadSlice(0xc042098540, 0xc04202fa0a, 0xc04202f978, 0x4fa2aa, 0xc04202f9b0, 0x0, 0xc042058180)
+	D:/Go/src/bufio/bufio.go:338 +0xc2
+bufio.(*Reader).ReadBytes(0xc042098540, 0xc04209820a, 0xc04202faf8, 0x0, 0x0, 0x0, 0x0)
+	D:/Go/src/bufio/bufio.go:416 +0x6d
+disposa.blue/cmd/margo_pkg.(*Broker).accept(0xc042086230, 0xc042098240, 0xc042086200)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:128 +0x53
+disposa.blue/cmd/margo_pkg.(*Broker).Loop(0xc042086230, 0x900001)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:213 +0x152
+disposa.blue/cmd/margo_pkg.Main()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:140 +0x71f
+main.main()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo/main.go:8 +0x27
+
+goroutine 7 [chan receive]:
+disposa.blue/cmd/margo_pkg.init.2.func1()
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/g_autoinst.go:114 +0x93
+created by disposa.blue/cmd/margo_pkg.init.2
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/g_autoinst.go:117 +0x3c
+
+goroutine 34 [runnable, locked to thread]:
+syscall.Syscall9(0x76b30d00, 0x7, 0xc0423600a0, 0x80000000, 0x3, 0x0, 0x3, 0x80, 0x0, 0x0, ...)
+	D:/Go/src/runtime/syscall_windows.go:185 +0x6b
+syscall.CreateFile(0xc0423600a0, 0x380000000, 0x0, 0x8000000003, 0x0, 0xc0420e1f70, 0xc0422f6720, 0x4110ad)
+	D:/Go/src/syscall/zsyscall_windows.go:294 +0xf0
+syscall.Open(0xc042116990, 0x23, 0x80000, 0x0, 0x456200, 0xc042385520, 0x4)
+	D:/Go/src/syscall/syscall_windows.go:290 +0x11c
+os.openFile(0xc042116990, 0x23, 0x0, 0xc000000000, 0xc042385520, 0xc0420e1ed8, 0x405145)
+	D:/Go/src/os/file_windows.go:89 +0xa2
+os.OpenFile(0xc042116990, 0x23, 0x0, 0xc000000000, 0xc04209c280, 0x0, 0x453f60)
+	D:/Go/src/os/file_windows.go:154 +0x185
+os.Open(0xc042116990, 0x23, 0xc0420e1f10, 0x4048b5, 0x84c820)
+	D:/Go/src/os/file.go:247 +0x4d
+io/ioutil.ReadFile(0xc042116990, 0x23, 0x0, 0x0, 0x0, 0x0, 0x0)
+	D:/Go/src/io/ioutil/ioutil.go:50 +0x73
+disposa.blue/something-borrowed/gocode.new_file_reader.func1(0xc04211a150)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/utils.go:177 +0xca
+created by disposa.blue/something-borrowed/gocode.new_file_reader
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/utils.go:180 +0x91
+
+goroutine 8 [sleep, locked to thread]:
+time.Sleep(0x77359400)
+	D:/Go/src/runtime/time.go:59 +0x107
+disposa.blue/cmd/margo_pkg.startOomKiller.func1(0x2710)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/oom.go:31 +0x156
+created by disposa.blue/cmd/margo_pkg.startOomKiller
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/oom.go:33 +0x46
+
+goroutine 35 [sleep]:
+time.Sleep(0x6fc23ac00)
+	D:/Go/src/runtime/time.go:59 +0x107
+disposa.blue/cmd/margo_pkg.Main.func1(0x6fc23ac00, 0xc042086230, 0xc042085150)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:122 +0x51
+created by disposa.blue/cmd/margo_pkg.Main
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:131 +0x83c
+
+goroutine 36 [chan receive]:
+disposa.blue/cmd/margo_pkg.Main.func2(0xc042086230)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:135 +0x8c
+created by disposa.blue/cmd/margo_pkg.Main
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/main.go:138 +0x6f1
+
+goroutine 39 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 40 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 41 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 42 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 43 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 44 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 45 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 46 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 47 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 48 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 49 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 50 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 51 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 52 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 53 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 54 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 55 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 56 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 57 [chan receive]:
+disposa.blue/cmd/margo_pkg.(*Broker).worker(0xc042086230, 0xc042010640, 0xc042098240)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:187 +0x91
+created by disposa.blue/cmd/margo_pkg.(*Broker).Loop
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/cmd/margo_pkg/broker.go:209 +0x120
+
+goroutine 69 [chan send]:
+disposa.blue/something-borrowed/gocode.update_packages.func1.1(0xc0422f6480)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:371 +0x82
+panic(0x86b580, 0xc042078390)
+	D:/Go/src/runtime/panic.go:489 +0x2dd
+disposa.blue/something-borrowed/gocode.(*gc_bin_parser).parse_export(0xc04204aa90, 0xc042078380)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package_bin.go:93 +0x62a
+disposa.blue/something-borrowed/gocode.(*package_file_cache).process_package_data(0xc04208bdc0, 0xc0423b2000, 0x127de, 0x129de)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:141 +0x46e
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04208bdc0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:90 +0x21d
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422f6480, 0xc04208bdc0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 70 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04208be00)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422f6480, 0xc04208be00)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 71 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc042121440)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422f6480, 0xc042121440)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 72 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc0421214c0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422f6480, 0xc0421214c0)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 73 [chan send]:
+disposa.blue/something-borrowed/gocode.update_packages.func1.1(0xc0422f6480)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:371 +0x82
+panic(0x86b580, 0xc042318040)
+	D:/Go/src/runtime/panic.go:489 +0x2dd
+disposa.blue/something-borrowed/gocode.(*gc_bin_parser).parse_export(0xc04204a820, 0xc042318020)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package_bin.go:93 +0x62a
+disposa.blue/something-borrowed/gocode.(*package_file_cache).process_package_data(0xc04208bd80, 0xc04642c000, 0x4dca4, 0x4dea4)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:141 +0x46e
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04208bd80)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:90 +0x21d
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422f6480, 0xc04208bd80)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 74 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04208be40)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422f6480, 0xc04208be40)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 75 [chan send]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc04208be80)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x151
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422f6480, 0xc04208be80)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 76 [chan receive]:
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc042121480)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:86 +0x1b4
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422f6480, 0xc042121480)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+goroutine 77 [chan send]:
+disposa.blue/something-borrowed/gocode.update_packages.func1.1(0xc0422f6480)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:371 +0x82
+panic(0x86b580, 0xc042084f80)
+	D:/Go/src/runtime/panic.go:489 +0x2dd
+disposa.blue/something-borrowed/gocode.(*gc_bin_parser).parse_export(0xc0423921a0, 0xc042084f50)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package_bin.go:93 +0x62a
+disposa.blue/something-borrowed/gocode.(*package_file_cache).process_package_data(0xc042121500, 0xc0423f2000, 0x39526, 0x39726)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:141 +0x46e
+disposa.blue/something-borrowed/gocode.(*package_file_cache).update_cache(0xc042121500)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/package.go:90 +0x21d
+disposa.blue/something-borrowed/gocode.update_packages.func1(0xc0422f6480, 0xc042121500)
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:374 +0x5c
+created by disposa.blue/something-borrowed/gocode.update_packages
+	C:/Users/chuanjian/AppData/Roaming/Sublime Text 3/Packages/GoSublime/src/disposa.blue/something-borrowed/gocode/autocompletecontext.go:376 +0xe7
+
+
+Gocode pkg: "github.com/kubernetes/kubernetes/pkg/api"
+Gocode env: gocode.margoEnv{LibPath:"D:\\Go\\pkg\\windows_amd64;C:\\Users\\chuanjian\\code\\go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"D:\\Go\\", GOPATH:"C:\\Users\\chuanjian\\code\\go", InstallSuffix:""}
+Gocode pkg: "."
+Gocode env: gocode.margoEnv{LibPath:"\\usr\\local\\go\\pkg\\windows_amd64;\\Users\\ckeyer\\go\\pkg\\windows_amd64", GOOS:"windows", GOARCH:"amd64", Compiler:"gc", GOROOT:"/usr/local/go", GOPATH:"/Users/ckeyer/go", InstallSuffix:""}
+
+** 2017-04-17 23:24:24.286242 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------

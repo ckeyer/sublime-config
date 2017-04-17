@@ -6,12 +6,14 @@
                                      The Sublime Text 3 Python IDE
 
 
-Anaconda v2.1.13
+Anaconda v2.1.16
 ================
 
-Welcome to new anaconda v2.1.13, what do you can find in this minor release?
+Welcome to new anaconda v2.1.16, what do you can find in this minor release?
+
+## Fixes
+    - Fixed performance degradation in macOS when long files where being edited #620, #558
 
 ## Improvements
-
-    - Made css template for anaconda tooltips theme agnostic
-
+    - Show one message per line on phantoms linting support
+    - Improved integration with Kite plugin
