@@ -1293,3 +1293,87 @@ go: cannot find GOROOT directory: \usr\local\go
 `
 exception: `None`
 --------------------------------
+
+** 2017-04-17 23:34:30.946337 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+
+** 2017-04-17 23:35:52.749499 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+
+** 2017-04-17 23:38:28.388804 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+
+** 2017-04-17 23:43:35.185144 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+
+** 2017-04-17 23:45:22.455188 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+
+** 2017-04-17 23:45:31.444219 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r16.07.09-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
+
+** 2017-04-17 23:57:10.217130 **:
+MarGo: MarGo build failed
+cmd: `['D:\\Go\\bin\\go.exe', 'build', '-tags', '', '-v', '-o', 'gosublime.margo_r17.03.05-1_go?.exe', 'disposa.blue/cmd/margo']`
+stdout: `
+
+`
+stderr: `
+go: cannot find GOROOT directory: \usr\local\go
+`
+exception: `None`
+--------------------------------
