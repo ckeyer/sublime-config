@@ -1,5 +1,6 @@
 {
 	"env": {
+		"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/usr/local/mongo/bin:/opt/X11/bin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ckeyer/go/bin:/usr/local/go/bin",
         // "CGO_ENABLED": 0,
         "GOROOT": "/usr/local/go",
         "GOPATH": "/Users/ckeyer/go"
