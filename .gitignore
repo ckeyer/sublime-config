@@ -12,3 +12,5 @@ Packages/User/Package\ Control.merged-ca-bundle
 **.sublime_session
 **.sublime_session
 **.cache
+Packages/User/Package Control.merged-ca-bundle
+Packages/User/oscrypto-ca-bundle.crt

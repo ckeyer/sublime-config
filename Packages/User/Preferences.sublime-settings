@@ -1,7 +1,7 @@
 {
 	"color_scheme": "Packages/User/SublimeLinter/Flatland Dark (SL).tmTheme",
 	"default_line_ending": "unix",
-	"font_size": 14,
+	"font_size": 15,
 	"ignored_packages":
 	[
 		"Vintage"

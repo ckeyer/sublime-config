@@ -50,6 +50,8 @@
 	// it must output the new file contents
 	"fmt_cmd": [],
 
+	"ipc_timeout": 1,
+
 	// Whether or not gslint is enabled
 	"gslint_enabled": true,
 
