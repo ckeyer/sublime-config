@@ -5,7 +5,8 @@
 	],
 	"installed_packages":
 	[
-		"Anaconda",
+		"anaconda_go",
+		"anaconda_php",
 		"Babel",
 		"BracketHighlighter",
 		"C Improved",
