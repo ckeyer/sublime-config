@@ -5,16 +5,15 @@
 	],
 	"installed_packages":
 	[
-		"anaconda_go",
 		"anaconda_php",
-		"Babel",
 		"BracketHighlighter",
-		"C Improved",
 		"Dockerfile Syntax Highlighting",
 		"Godef",
 		"GoImports",
 		"GoSublime",
 		"JsFormat",
+		"LESS",
+		"nginx",
 		"Node Completions",
 		"Package Control",
 		"phpfmt",

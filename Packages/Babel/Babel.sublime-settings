@@ -1,8 +1,0 @@
-{
-  "debug": false,
-  "use_local_babel": true,
-  "node_modules": {
-    "osx": "/Users/ckeyer/node_modules"
-  },
-  "options": {}
-}

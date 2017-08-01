@@ -1,6 +1,6 @@
 {
 	// The maximum amount of memory(MiB) that MarGo is allowed to use
-	"margo_oom": 10000,
+	"margo_oom": 200,
 
 	// you may set specific environment variables here
 	// e.g "env": { "PATH": "$HOME/go/bin:$PATH" }
@@ -48,7 +48,7 @@
 	// e.g. ["goimports"]
 	// the command will be passed, to its stdin, the contents of the file
 	// it must output the new file contents
-	"fmt_cmd": [],
+	"fmt_cmd": ["goimports"],
 
 	"ipc_timeout": 1,
 

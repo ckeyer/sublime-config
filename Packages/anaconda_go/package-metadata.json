@@ -1,1 +1,0 @@
-{"version": "0.2.0", "platforms": ["*"], "url": "https://github.com/DamnWidget/anaconda_go", "sublime_text": ">=3000", "dependencies": [], "description": "AnacondaGO adds autocompletion, linting and IDE features for Golang to your Sublime Text 3"}
