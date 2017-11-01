@@ -7,9 +7,9 @@
 	// in values, $PATH and ${PATH} are replaced with
 	// the corresponding environment(PATH) variable, if it exists.
 	"env": {
-        // "CGO_ENABLED": 0,
-        // "GOROOT": "/usr/local/go",
-        // "GOPATH": "/Users/ckeyer/go"
+		// "CGO_ENABLED": 0,
+		// "GOROOT": "/usr/local/go",
+		// "GOPATH": "/Users/ckeyer/go"
 	},
 
 	// if set, whenever possible `GOPATH` will be set to `GS_GOPATH`.
@@ -68,7 +68,7 @@
 	],
 
 	// Whether or not comp lint is enabled (this might conflict with gslint)
-	"comp_lint_enabled": false,
+	"comp_lint_enabled": true,
 
 	// The list of commands that comp-lint will run (in the order specified)
 	// each entry contains a map of:
@@ -218,88 +218,89 @@
 	// once a completion is expanded and where it's placed once you press tab afterwards.
 	// duplicate markers e.g f("...", $1, $1) will result in multiple cursors, one for each duplication.
 	"snippets": [
-	 	{
-	        "match": {"global": true}, // these snippets will only be present in a function scope
-	        "snippets": [
-		        {"text": "float32", "title": "float32", "value": "float32"},
-		        {"text": "float64", "title": "float64", "value": "float64"},
-		        {"text": "complex64", "title": "complex64", "value": "complex64"},
-		        {"text": "complex128", "title": "complex128", "value": "complex128"},
-	            {"text": "interface", "title": "interface{}", "value": "interface{$1}"},
-		        {"text": "return ", "title": "return", "value": "return $1"},
-		        {"text": "continue", "title": "continue", "value": "continue"},
-		        {"text": "println", "title": "println(...)", "value": "println($1)"},
-		        {"text": "append", "title": "append(...)", "value": "append(${1:ss}, ${2:...})"},
-	            {
-	            	"text": "if err ?= nil",
-	            	"title": "if err{}",
-	            	"value": "if ${1:err} != ${2:nil} { $3\n\treturn $4\n}"
-	            },
-	            {
-	            	"text": "for k,v range",
-	            	"title": "for range",
-	            	"value": "for ${2:k}, ${3:v} := range ${1:set} {\n\t$4\n}"
-	            },
-	            {
-	            	"text": "go func",
-	            	"title": "go func()",
-	            	"value": "go func($1) $2 {\n\t$3\n}($4)"
-	            },
-	            {
-	            	"text": "defer do",
-	            	"title": "defer ...",
-	            	"value": "defer $1"
-	            },
-	            {
-	            	"text": "defer func",
-	            	"title": "defer func()",
-	            	"value": "defer func(){\n\t$1\n}()"
-	            },
-	            {
-	            	"text": "recover",
-	            	"title": "recover",
-	            	"value": "if ${1:r} := recover(); ${1:r} != nil {\n\t$3\n}"
-	            },
-	            {
-	            	"text": "struct var",
-	            	"title": "var Type struct ...",
-	            	"value": "var $1 struct{\n\t${2:Name} ${3:string}\n}"
-	            },
-	            {
-	            	"text": "struct type",
-	            	"title": "type Type struct ...",
-	            	"value": "type ${1:Name} struct{\n\t${2:Name} ${3:string}\n}"
-	            },
-	            {
-	            	"text": "switch",
-	            	"title": "switch",
-	            	"value": "switch ${1:type} {\ncase ${2:branch}: $3\ndefault:\n\t$4\n}"
-	            },
-	            {
-	            	"text": "select",
-	            	"title": "select",
-	            	"value": "select {\ncase ${1:branch}: $2\ndefault:\n\t$3\n}"
-	            },
-	            {
-	            	"text": "case",
-	            	"title": "case",
-	            	"value": "case ${1:branch}: $2"
-	            },
-	            {
-	            	"text": "fallthrough", "title": "fallthrough", "value": "fallthrough"
-	            },
-	            {
-	            	"text": "test",
-	            	"title": "Test{}", 
-	            	"value": "func Test$1(${2:t} *testing.T) {\n\t$3\n}"
-	            },
-	            {
-	            	"text": "benchmark",
-	            	"title": "Benchmark{}", 
-	            	"value": "func Benchmark$1(${2:b} *testing.B) {\n\t$3\n}"
-	            }
-	        ]
-	    }
+		{
+			"match": {"global": true}, // these snippets will only be present in a function scope
+			"snippets": [
+				{"text": "float32", "title": "float32", "value": "float32"},
+				{"text": "float64", "title": "float64", "value": "float64"},
+				{"text": "complex64", "title": "complex64", "value": "complex64"},
+				{"text": "complex128", "title": "complex128", "value": "complex128"},
+				{"text": "interface", "title": "interface{}", "value": "interface{$1}"},
+				{"text": "return ", "title": "return", "value": "return $1"},
+				{"text": "continue", "title": "continue", "value": "continue"},
+				{"text": "println", "title": "println(...)", "value": "println($1)"},
+				{"text": "append", "title": "sli = append(sli, ...)", "value": "${1:sli} = append(${1:sli}, ${2:...})"},
+				{"text": "append just", "title": "append(...)", "value": "append(${1:sli}, ${2:...})"},
+				{
+					"text": "if err ?= nil",
+					"title": "if err{}",
+					"value": "if ${1:err} != ${2:nil} { $3\n\treturn $4\n}"
+				},
+				{
+					"text": "for k,v range",
+					"title": "for range",
+					"value": "for ${2:k}, ${3:v} := range ${1:set} {\n\t$4\n}"
+				},
+				{
+					"text": "go func",
+					"title": "go func()",
+					"value": "go func($1) $2 {\n\t$3\n}($4)"
+				},
+				{
+					"text": "defer do",
+					"title": "defer ...",
+					"value": "defer $1"
+				},
+				{
+					"text": "defer func",
+					"title": "defer func()",
+					"value": "defer func(){\n\t$1\n}()"
+				},
+				{
+					"text": "recover",
+					"title": "recover",
+					"value": "if ${1:r} := recover(); ${1:r} != nil {\n\t$3\n}"
+				},
+				{
+					"text": "struct var",
+					"title": "var Type struct ...",
+					"value": "var $1 struct{\n\t${2:Name} ${3:string}\n}"
+				},
+				{
+					"text": "struct type",
+					"title": "type Type struct ...",
+					"value": "type ${1:Name} struct{\n\t${2:Name} ${3:string}\n}"
+				},
+				{
+					"text": "switch",
+					"title": "switch",
+					"value": "switch ${1:type} {\ncase ${2:branch}: $3\ndefault:\n\t$4\n}"
+				},
+				{
+					"text": "select",
+					"title": "select",
+					"value": "select {\ncase ${1:branch}: $2\ndefault:\n\t$3\n}"
+				},
+				{
+					"text": "case",
+					"title": "case",
+					"value": "case ${1:branch}: $2"
+				},
+				{
+					"text": "fallthrough", "title": "fallthrough", "value": "fallthrough"
+				},
+				{
+					"text": "test",
+					"title": "Test{}", 
+					"value": "func Test$1(${2:t} *testing.T) {\n\t$3\n}"
+				},
+				{
+					"text": "benchmark",
+					"title": "Benchmark{}", 
+					"value": "func Benchmark$1(${2:b} *testing.B) {\n\t$3\n}"
+				}
+			]
+		}
 	],
 
 	"default_snippets": [
