@@ -1,0 +1,32 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"anaconda_php",
+		"BracketHighlighter",
+		"Dockerfile Syntax Highlighting",
+		"Godef",
+		"GoImports",
+		"GoSublime",
+		"INI",
+		"JsFormat",
+		"LESS",
+		"nginx",
+		"Node Completions",
+		"Package Control",
+		"phpfmt",
+		"Protocol Buffer Syntax",
+		"QML",
+		"SCSS",
+		"SCSS Snippets",
+		"SublimeLinter",
+		"Tag",
+		"Theme - Flatland",
+		"Vue Syntax Highlight",
+		"Vuejs Complete Package",
+		"Vuejs Snippets"
+	]
+}
