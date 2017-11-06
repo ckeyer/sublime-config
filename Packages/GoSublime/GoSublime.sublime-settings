@@ -68,7 +68,7 @@
 	],
 
 	// Whether or not comp lint is enabled (this might conflict with gslint)
-	"comp_lint_enabled": true,
+	"comp_lint_enabled": false,
 
 	// The list of commands that comp-lint will run (in the order specified)
 	// each entry contains a map of:
