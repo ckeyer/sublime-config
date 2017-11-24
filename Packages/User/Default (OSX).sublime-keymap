@@ -2,6 +2,8 @@
 	{ "keys": ["ctrl+z"], "command": "jump_back" },
 	{ "keys": ["ctrl+shift+z"], "command": "jump_forward" },
 	{ "keys": ["ctrl+j"], "command": "goto_definition" },
+	{ "keys": ["ctrl+["], "command": "fold_by_level", "args": {"level": 1} },
+	{ "keys": ["ctrl+]"], "command": "unfold_all" },
 	{
 		"button": "button1",
 		"modifiers": ["alt"],
