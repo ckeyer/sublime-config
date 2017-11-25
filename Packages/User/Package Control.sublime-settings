@@ -5,8 +5,10 @@
 	],
 	"installed_packages":
 	[
+		"AceJump",
 		"anaconda_php",
 		"BracketHighlighter",
+		"C Improved",
 		"Dockerfile Syntax Highlighting",
 		"Godef",
 		"GoImports",

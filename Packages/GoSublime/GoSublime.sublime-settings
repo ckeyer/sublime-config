@@ -1,16 +1,12 @@
 {
 	// The maximum amount of memory(MiB) that MarGo is allowed to use
-	"margo_oom": 200,
+	"margo_oom": 1000,
 
 	// you may set specific environment variables here
 	// e.g "env": { "PATH": "$HOME/go/bin:$PATH" }
 	// in values, $PATH and ${PATH} are replaced with
 	// the corresponding environment(PATH) variable, if it exists.
-	"env": {
-		// "CGO_ENABLED": 0,
-		// "GOROOT": "/usr/local/go",
-		// "GOPATH": "/Users/ckeyer/go"
-	},
+	"env": {},
 
 	// if set, whenever possible `GOPATH` will be set to `GS_GOPATH`.
 	// please see `Usage & Tips` `ctrl+dot,ctrl+2`
@@ -45,11 +41,17 @@
 
 	// by default fmt'ing is done by margo using `fmt_tab_intent` and `fmt_tab_width` (above)
 	// you may use a command of your choosing by setting `fmt_cmd`
-	// e.g. ["goimports"]
+	// e.g. ["goimports", "-srcdir", "$_dir"]
 	// the command will be passed, to its stdin, the contents of the file
 	// it must output the new file contents
-	"fmt_cmd": ["goimports"],
+	//
+	// You might need to increase `ipc_timeout` below if you use this setting.
+	// If `fmt_cmd` takes too long, the internal MarGo fmt will be tried instead.
+	"fmt_cmd": [],
 
+	// ipc_timeout sets the maximum amount of time time in seconds to wait for a blocking ipc call to MarGo.
+	// Due to limitations in Sublime Text, fmt cannot be done without freezing Sublime Text.
+	// If you use the `fmt_cmd` setting above with a command that is slow like `goimports` you should increase this value.
 	"ipc_timeout": 1,
 
 	// Whether or not gslint is enabled
@@ -184,7 +186,7 @@
 	//     import (
 	//         foo "gosubli.me/go-foo"
 	//     )
-	"use_named_imports": true,
+	"use_named_imports": false,
 
 	// whether or not MarGo may automatically run `go install` for packages that are missing
 	// when you `import`, or `autocomplete` them
@@ -217,7 +219,55 @@
 	// you maybe add field markers ($1, $2, etc) to the `value` string to dictate where the cursor is place
 	// once a completion is expanded and where it's placed once you press tab afterwards.
 	// duplicate markers e.g f("...", $1, $1) will result in multiple cursors, one for each duplication.
-	
+	"snippets": [],
+
+	"default_snippets": [
+		{
+			"match": {"global": false, "pkgname": ""},
+			"snippets": [
+				{"text": "package ${default_pkgname}", "title": "", "value": "package ${default_pkgname}\n\n$1\n"}
+			]
+		},
+		{
+			"match": {"global": true, "pkgname": "^main$"},
+			"snippets": [
+				{"text": "func main", "title": "func main {...}", "value": "func main() {\n\t$0\n}\n"}
+			]
+		},
+		{
+			"match": {"global": true, "pkgname": "."},
+			"snippets": [
+				{"text": "import", "title": "import (...)", "value": "import (\n\t\"$1\"\n)"},
+				{"text": "func", "title": "func {...}", "value": "func ${1:name}($2)$3 {\n\t$0\n}"},
+				{"text": "var", "title": "var (...)", "value": "var (\n\t$1\n)"},
+				{"text": "const", "title": "const (...)", "value": "const (\n\t$1\n)"},
+				{"text": "init", "title": "func init()", "value": "func init() {\n\t$1\n}"},
+				{
+					"text": "func http handler",
+					"title": "func(rw, req)",
+					"value": "func ${1:name}(rw http.ResponseWriter, req *http.Request) {\n\t$0\n}"
+				}
+			]
+		},
+		{
+			"match": {"global": true, "pkgname": ".", "has_types": true},
+			"snippets": [
+				{
+					"text": "func (*${typename})",
+					"title": "func (...) {...}",
+					"value": "func (${1:${typename_abbr}} ${2:*}${typename}) ${3:name}($4)$5 {\n\t$0\n}"
+				}
+			]
+		},
+		{
+			"match": {"local": true},
+			"snippets": [
+				{"text": "func", "title": "func{...}()", "value": "func($1) {\n\t$0\n}($2)"},
+				{"text": "var", "title": "var [name] [type]", "value": "var ${1:name} ${2:type}"}
+			]
+		}
+	],
+
 	// whether or not 9o should ask Sublime Text to show(scroll to) the end of a command's output
 	// by default it will attempt to show the beginning
 	"9o_show_end": false,

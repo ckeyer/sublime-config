@@ -9,5 +9,21 @@
 		"modifiers": ["alt"],
 		"press_command": "drag_select",
 		"command": "goto_definition"
-	}
+	},
+    {
+        "keys": ["super+shift+;"],
+        "command": "ace_jump_word"
+    },
+    {
+        "keys": ["super+shift+'"],
+        "command": "ace_jump_char"
+    },
+    {
+        "keys": ["super+shift+."],
+        "command": "ace_jump_line"
+    },
+    {
+        "keys": ["super+shift+,"],
+        "command": "ace_jump_within_line"
+    }
 ]
