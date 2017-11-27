@@ -5,6 +5,9 @@
         "GOROOT": "/usr/local/go",
         "GOPATH": "/Users/ckeyer/go"
 	},
+	"fmt_cmd": ["goimports"],
+	"autocomplete_suggest_imports": true,
+	"use_named_imports": true,
 	"snippets": [
 		{
 			"match": {"global": true}, // these snippets will only be present in a function scope
@@ -17,6 +20,7 @@
 				{"text": "return ", "title": "return", "value": "return $1"},
 				{"text": "continue", "title": "continue", "value": "continue"},
 				{"text": "println", "title": "println(...)", "value": "println($1)"},
+				{"text": "arr", "title": "[]Type{...}", "value": "[]${1:string}{$2}"},
 				{"text": "append", "title": "sli = append(sli, ...)", "value": "${1:sli} = append(${1:sli}, ${2:...})"},
 				{"text": "append just", "title": "append(...)", "value": "append(${1:sli}, ${2:...})"},
 				{
