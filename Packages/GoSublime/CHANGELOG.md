@@ -18,6 +18,17 @@ GoSublime Changes
 -----------------
 
 
+## 17.12.08-1
+	* fix broken commenting when the Go package is disabled
+
+## 17.11.27-1
+	* use the old GS syntax definitions instead of the new ones from ST to avoid regressions
+
+## 17.11.25-1
+	* use the latest Sublime Text Go syntax
+    * convert all our existing syntax definitions to .sublime-synta
+    * keep track of the sh.bootstrap output and include it in the Sanity Check
+
 ## 17.11.14-1
 	* Fix failure to list individual Test|Benchmark|Example functions in the test palette
 
