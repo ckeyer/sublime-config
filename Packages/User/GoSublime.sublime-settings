@@ -20,7 +20,10 @@
 				{"text": "return ", "title": "return", "value": "return $1"},
 				{"text": "continue", "title": "continue", "value": "continue"},
 				{"text": "println", "title": "println(...)", "value": "println($1)"},
+				{"text": "sarr", "title": "[]string{...}", "value": "[]string{$2}"},
 				{"text": "arr", "title": "[]Type{...}", "value": "[]${1:string}{$2}"},
+				{"text": "map", "title": "map[]...", "value": "map[${1:string}]${2:string}"},
+				{"text": "map struct", "title": "map[string]struct...", "value": "map[${1:string}]struct{}"},
 				{"text": "append", "title": "sli = append(sli, ...)", "value": "${1:sli} = append(${1:sli}, ${2:...})"},
 				{"text": "append just", "title": "append(...)", "value": "append(${1:sli}, ${2:...})"},
 				{
@@ -118,7 +121,7 @@
 			"match": {"global": true, "pkgname": "."},
 			"snippets": [
 				{"text": "import", "title": "import (...)", "value": "import (\n\t\"$1\"\n)"},
-				{"text": "func", "title": "func {...}", "value": "// ${1:name} ${2:...} \nfunc ${1:name} ($3)$4 {\n\t$0\n}"},
+				{"text": "func", "title": "func {...}", "value": "// ${1:name} ${2:...} \nfunc ${1:name}($3) $4 {\n\t$0\n}"},
 				{"text": "var", "title": "var (...)", "value": "var (\n\t$1\n)"},
 				{"text": "const", "title": "const (...)", "value": "const (\n\t$1\n)"},
 				{"text": "init", "title": "func init()", "value": "func init() {\n\t$1\n}"},
@@ -135,7 +138,7 @@
 				{
 					"text": "func (*${typename})",
 					"title": "func (...) {...}",
-					"value": "// ${3:name} ${4:...} \nfunc (${1:${typename_abbr}} ${2:*}${typename}) ${3:name} ($5)$5 {\n\t$0\n}"
+					"value": "// ${3:name} ${4:...} \nfunc (${1:${typename_abbr}} ${2:*}${typename}) ${3:name}($5)$6 {\n\t$0\n}"
 				}
 			]
 		},
