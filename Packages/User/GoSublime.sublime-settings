@@ -1,4 +1,5 @@
 {
+	"margo_oom": 500,
 	"env": {
 		"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/usr/local/mongo/bin:/opt/X11/bin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ckeyer/go/bin:/usr/local/go/bin",
         // "CGO_ENABLED": 0,
@@ -6,6 +7,7 @@
         "GOPATH": "/Users/ckeyer/go"
 	},
 	"fmt_cmd": ["goimports"],
+	"ipc_timeout": 3,
 	"autocomplete_suggest_imports": true,
 	"use_named_imports": true,
 	"snippets": [

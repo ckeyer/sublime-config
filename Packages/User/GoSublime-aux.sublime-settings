@@ -7,7 +7,7 @@
 	[
 		"go run flushreader.go"
 	],
-	"ann": "a17.12.17-1",
+	"ann": "a18.01.14-1",
 	"install_version": "r17.12.17-1",
 	"version": "r17.12.17-1"
 }
