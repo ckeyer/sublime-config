@@ -1,13 +1,18 @@
 {
 	"color_scheme": "Packages/User/SublimeLinter/Flatland Dark (SL).tmTheme",
 	"default_line_ending": "unix",
+	"ensure_newline_at_eof_on_save": true,
 	"font_size": 16,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"index_files": false,
+	"index_files": true,
 	"index_workers": 1,
+	"line_padding_top": 2,
+	"match_brackets_angle": true,
 	"remember_full_screen": true,
 	"show_encoding": true,
 	"show_line_endings": true,
