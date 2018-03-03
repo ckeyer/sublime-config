@@ -3,8 +3,16 @@
 		"button": "button1",
 		"modifiers": ["ctrl", "shift"],
 		"press_command": "drag_select",
-		"command": "gs_on_left_click"
+		"command": "gs_doc",
+		"args": {"mode": "goto"},
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
+	// {
+	// 	"button": "button1",
+	// 	"modifiers": ["ctrl", "shift"],
+	// 	"press_command": "drag_select",
+	// 	"command": "gs_on_left_click"
+	// },
 	{
 		"button": "button2",
 		"modifiers": ["ctrl", "shift"],

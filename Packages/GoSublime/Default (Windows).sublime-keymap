@@ -71,7 +71,7 @@
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 	{
-		"keys": ["ctrl+.", "ctrl+g"],
+		"keys": ["ctrl+.", "ctrl+j"],
 		"command": "gs_doc",
 		"args": {"mode": "goto"},
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
