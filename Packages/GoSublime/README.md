@@ -1,3 +1,8 @@
+
+
+[![Backers on Open Collective](https://opencollective.com/gosublime/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/gosublime/sponsors/badge.svg)](#sponsors) [![Build Status](https://travis-ci.org/DisposaBoy/GoSublime.svg?branch=master)](https://travis-ci.org/DisposaBoy/GoSublime)
+<hr>
+
 GoSublime
 =========
 
@@ -64,8 +69,55 @@ GoSublime and MarGo are released under the MIT license. See [LICENSE.md](LICENSE
 
 GoSublime is the copyrighted work of *The GoSublime Authors* i.e me ([https://github.com/DisposaBoy/GoSublime](DisposaBoy)) and *all* contributors. If you submit a change, be it documentation or code, so long as it's committed to GoSublime's history I consider you a contributor. See [AUTHORS.md](AUTHORS.md) for a list of all the GoSublime authors/contributors.
 
+Thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="graphs/contributors"><img src="https://opencollective.com/gosublime/contributors.svg?width=890" /></a>
+
 Supporters
 ==========
 
 GoSublime has received support from many kind individuals and as a thank you I've added most to [THANKS.md](THANKS.md) file as a way of saying *Thank You*. Some donors donated anonymously and so are not listed, however. If you have donated and would like to add an entry to this file, feel free to open a pull request.
+
+Donations
+=========
+
+Supporting me means I can spend more time working on GoSublime and other Open Source projects, hopefully leading to more consistent and regular development.
+
+Donate using Liberapay
+
+<a href="https://liberapay.com/DisposaBoy/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+
+
+
+Donate using PayPal
+
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4RFMYNTYTUQJU"><img alt="Donate using PayPal" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif"/></a>
+
+
+
+
+
+Become a backer or a sponsor on OpenCollective
+
+### Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/gosublime#backer)]
+
+<a href="https://opencollective.com/gosublime#backers" target="_blank"><img src="https://opencollective.com/gosublime/backers.svg?width=890"></a>
+
+
+### Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/gosublime#sponsor)]
+
+<a href="https://opencollective.com/gosublime/sponsor/0/website" target="_blank"><img src="https://opencollective.com/gosublime/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/gosublime/sponsor/1/website" target="_blank"><img src="https://opencollective.com/gosublime/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/gosublime/sponsor/2/website" target="_blank"><img src="https://opencollective.com/gosublime/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/gosublime/sponsor/3/website" target="_blank"><img src="https://opencollective.com/gosublime/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/gosublime/sponsor/4/website" target="_blank"><img src="https://opencollective.com/gosublime/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/gosublime/sponsor/5/website" target="_blank"><img src="https://opencollective.com/gosublime/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/gosublime/sponsor/6/website" target="_blank"><img src="https://opencollective.com/gosublime/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/gosublime/sponsor/7/website" target="_blank"><img src="https://opencollective.com/gosublime/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/gosublime/sponsor/8/website" target="_blank"><img src="https://opencollective.com/gosublime/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/gosublime/sponsor/9/website" target="_blank"><img src="https://opencollective.com/gosublime/sponsor/9/avatar.svg"></a>
+
 

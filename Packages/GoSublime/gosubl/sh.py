@@ -9,6 +9,8 @@ import sublime
 import subprocess
 import time
 
+st_environ = os.environ.copy()
+
 try:
 	STARTUPINFO = subprocess.STARTUPINFO()
 	STARTUPINFO.dwFlags |= subprocess.STARTF_USESHOWWINDOW
@@ -197,72 +199,79 @@ def gs_init(_={}):
 		'CGO_ENABLED',
 	]
 
-	cmdl = []
-	for k in vars:
-		cmdl.append('[[[$'+k+']]'+k+'[[%'+k+'%]]]')
-	cmd_str = 'echo "%s"' % ' '.join(cmdl)
+	cmd = ShellCommand('go run sh-bootstrap.go')
+	cmd.wd = gs.dist_path('gosubl')
+	cr = cmd.run()
+	raw_ver = ''
+	ver = ''
+	if cr.exc or cr.err:
+		_print('error running sh-bootstrap.go: %s' % (cr.exc or cr.err))
 
-	cr = ShellCommand(cmd_str).run()
-	if cr.exc:
-		_print('error loading env vars: %s' % cr.exc)
+	for ln in cr.out.split('\n'):
+		ln = ln.strip()
+		if not ln:
+			continue
 
-	out = cr.out + cr.err
+		v, err = gs.json_decode(ln, {})
+		if err:
+			_print('cannot decode sh-bootstrap.go output: `%s`' % (ln))
+			continue
 
-	mats = re.findall(r'\[\[\[(.*?)\]\](%s)\[\[(.*?)\]\]\]' % '|'.join(vars), out)
-	for m in mats:
-		a, k, b = m
-		v = ''
-		if a != '$'+k:
-			v = a
-		elif b != '%'+k+'%':
-			v = b
+		if not gs.is_a(v, {}):
+			_print('cannot decode sh-bootstrap.go output: `%s`. value: `%s` is not a dict' % (ln, v))
+			continue
 
-		if v:
-			_env_ext[k] = v
+		env = v.get('Env')
+		if not gs.is_a(env, {}):
+			_print('cannot decode sh-bootstrap.go output: `%s`. Env: `%s` is not a dict' % (ln, env))
+			continue
 
-	if not _env_ext.get('GOROOT'):
-		m = re.search(r'\bGOROOT=(.+)', go('env'))
-		if m:
-			_env_ext['GOROOT'] = m.group(1).strip('"')
+		ver = v.get('Version') or ver
+		raw_ver = v.get('RawVersion') or raw_ver
+		_env_ext.update(env)
 
-	for k in _env_ext:
-		v = os.environ.get(k)
-		if v:
-			_env_ext[k] = v
-
-	cr_go = go_cmd(['version']).run()
-	cr_go_out = cr_go.out + cr_go.err
-	m = about.GO_VERSION_OUTPUT_PAT.search(cr_go_out)
-	if m:
-		GO_VERSION = about.GO_VERSION_NORM_PAT.sub('', m.group(1))
+	if ver:
+		GO_VERSION = ver
 		VDIR_NAME = '%s_%s' % (about.VERSION, GO_VERSION)
 
+
+	_env_keys = sorted(_env_ext.keys())
+
+	for k in _env_keys:
+		v = _env_ext[k]
+		x = st_environ.get(k)
+		if k != 'PATH' and x and x != v:
+			_print('WARNING: %s is different between your shell and ST/GUI environments' % (k))
+			_print('     shell.%s: %s' % (k, v))
+			_print('    st/gui.%s: %s' % (k, x))
+
+	for k in _env_keys:
+		_print('using shell env %s=%s' % (k, _env_ext[k]))
+
+	_print('go version: `%s` (raw version string `%s`)' % (
+		(GO_VERSION if GO_VERSION != about.DEFAULT_GO_VERSION else ver),
+		raw_ver
+	))
+
+
 	dur = (time.time() - start)
+	_print('shell bootstrap took %0.3fs' % (dur))
 
 	ev.debug('sh.init', {
-		'cr.init': cr,
-		'cr.go': cr_go,
+		'cr': cr,
 		'go_version': GO_VERSION,
 		'env': _env_ext,
 		'dur': dur,
 	})
 
-	cmd_lst = []
-	for v in cr.cmd_lst:
-		v = v.replace(cmd_str, 'echo "..."')
-		cmd_lst.append(v)
-
-	_print('load env vars %s: go version: %s -> `%s` -> `%s`: %0.3fs' % (
-		cmd_lst,
-		cr_go.cmd_lst,
-		cr_go_out,
-		(GO_VERSION if GO_VERSION != about.DEFAULT_GO_VERSION else cr_go),
-		dur,
-	))
+	export_env()
+	gs.sync_settings_callbacks.append(export_env)
 
 	init_done = True
 
+_print_log = []
 def _print(s):
+	_print_log.append(s)
 	print('GoSublime %s sh: %s' % (about.VERSION, s))
 
 def getenv(name, default='', m={}):
@@ -284,7 +293,7 @@ def env(m={}):
 	Assemble environment information needed for correct operation. In particular,
 	ensure that directories containing binaries are included in PATH.
 	"""
-	e = os.environ.copy()
+	e = st_environ.copy()
 	e.update(_env_ext)
 	e.update(m)
 
@@ -359,6 +368,11 @@ def env(m={}):
 		'_nm': fn.replace('\\', '/').split('/')[-1],
 	})
 
+	if not e.get('GOPATH'):
+		gp = os.path.expanduser('~/go')
+		e['GOPATH'] = gp
+		_print('GOPATH is not set... setting it to the default: %s' % gp)
+
 	# Ensure no unicode objects leak through. The reason is twofold:
 	# 	* On Windows, Python 2.6 (used by Sublime Text) subprocess.Popen
 	# 	  can only take bytestrings as environment variables in the
@@ -432,6 +446,14 @@ def exe(nm):
 		nm = '%s.exe' % nm
 
 	return os.path.join(bin_dir(), nm)
+
+def export_env():
+	e = env()
+	for k in gs.setting('export_env_vars'):
+		v = e.get(k)
+		if v:
+			# note-to-self: don't get any clever ideas about changing this to os.putenv()! because Python...
+			os.environ[k] = v
 
 init_done = False
 GO_VERSION = about.DEFAULT_GO_VERSION

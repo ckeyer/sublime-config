@@ -1,21 +1,81 @@
-**WARNING:**
+**Donate:**
 
-If you automatically update GoSublime (or any other plugin with run-time state)
-you run the risk of breaking the plugin or crashing Sublime Text,
-because Sublime Text (and Package Control) cannot update such plugins properly without a restart.
+I'm currently toying with the idea of doing Open Source development full or part-time.
 
-You are advised to only *manually* update such plugins and *restart Sublime Text*
+If you find GoSublime useful and would like to support me and future development of GoSublime,
+please donate via one of the available methods on https://github.com/DisposaBoy/GoSublime#donations
+or reach out to disposaboy@dby.me to discuss other options.
+
+
 
 **Note:**
 
-* It is assumed that you have read and understood the contents of SUPPORT.md
-* You may need to restart Sublime Text after GoSublime updates
-* If you use the `fmt_cmd` setting with `goimports` or any other slow command
-   you should read and understand the `ipc_timeout` setting documented in `GoSublime.sublime-settings`
-
+If you use the current implementation of margo extensions and get a compilation error referencing the import path `disposa.blue/margo`, update your extension package to use the new path `gosublime/margo` instead.
 
 GoSublime Changes
 -----------------
+
+## 18.01.17
+	* update gocode
+	* sync the settings when the active view changes to avoid them going out-of-sync when switching projects
+	* add support for exporting env vars into ST.
+	  see docs for the setting `export_env_vars` (`ctrl+., ctrl+4`, `super+., super+4` on mac)
+	* sync all project settings, not just `env`
+
+## 17.12.17-1
+	* fix failure to list some packges in the imports palette
+	* update gocode
+
+## 17.12.08-1
+	* fix broken commenting when the Go package is disabled
+
+## 17.11.27-1
+	* use the old GS syntax definitions instead of the new ones from ST to avoid regressions
+
+## 17.11.25-1
+	* use the latest Sublime Text Go syntax
+    * convert all our existing syntax definitions to .sublime-synta
+    * keep track of the sh.bootstrap output and include it in the Sanity Check
+
+## 17.11.14-1
+	* Fix failure to list individual Test|Benchmark|Example functions in the test palette
+
+## 17.11.13-1
+	* Change the prefix for identifiers in `*_test.go` files to tilde(~)
+	  to prevent cluttering the declartion palette when searching for (un-)exported identifiers
+
+	* Move sh.py/shell bootstrapping into Go and always run it through the shell.
+
+	  This should fix 2 bugs:
+
+	  1. If you had multiple versions of Go installed, one chosen seemingly at random:
+
+	  * Go is installed via your package manager and is setup correctly
+	  * You then installed a custom version of Go and set GOROOT (in your shell)
+	  * It has no effect even though your custom binary appear first in $PATH
+
+	  This might also fix other cases where the sanity check shows correct settings but compilation fails.
+
+	  2. multi-path GOPATH, PATH, etc. in Fish and similar shells are seemingly ignored
+
+	  In Fish and similar shells where PATH (and other colon separated vars) are lists;
+	  when these vars are echoed, they are output as `"dir1" "dir2"` instead of `"dir1":"dir2"`
+	  so when GS sees it, it thinks it's 1 non-existend dir `"dir1 dir2"`.
+
+## 17.10.15
+	* update gocode
+	* fix failure to display `time` (and other packages) in the imports list
+
+## 17.08.23
+
+	* update gocode
+
+## 17.03.05
+	* assign default GOPATH as is done in go1.8
+	* don't follow symlinks when scanning for package lists
+
+## 17.02.16
+	* update gocode
 
 ## 16.07.09-1
 	* update gocode
