@@ -1,0 +1,24 @@
+[
+	{
+		"button": "button1",
+		"modifiers": ["alt"],
+		"press_command": "drag_select",
+		"command": "goto_definition"
+	},
+	{
+        "keys": ["alt+shift+;"],
+        "command": "ace_jump_word"
+    },
+    {
+        "keys": ["alt+shift+'"],
+        "command": "ace_jump_char"
+    },
+    {
+        "keys": ["alt+shift+."],
+        "command": "ace_jump_line"
+    },
+    {
+        "keys": ["alt+shift+,"],
+        "command": "ace_jump_within_line"
+    }
+]
