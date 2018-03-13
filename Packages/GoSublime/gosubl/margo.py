@@ -147,15 +147,21 @@ class MargoSingleton(object):
 		self.send(view=view, action=actions.ViewPosChanged)
 
 	def fmt(self, view):
+		return self._fmt_save(view=view, action=actions.ViewFmt, name='fmt', timeout=5.000)
+
+	def on_pre_save(self, view):
+		return self._fmt_save(view=view, action=actions.ViewPreSave, name='pre-save', timeout=2.000)
+
+	def _fmt_save(self, *, view, action, name, timeout):
 		id_nm = '%d: %s' % (view.id(), view.file_name() or view.name())
-		rq = self.send(view=view, action=actions.ViewFmt)
-		rs = rq.wait(1.000)
+		rq = self.send(view=view, action=action)
+		rs = rq.wait(timeout)
 		if not rs:
-			self.out.println('fmt timedout on view %s' % id_nm)
+			self.out.println('%s timedout on view %s' % (name, id_nm))
 			return
 
 		if rs.error:
-			self.out.println('fmt error in view %s: %s' % (id_nm, rs.error))
+			self.out.println('%s error in view %s: %s' % (name, id_nm, rs.error))
 			return
 
 		req = rq.props.get('View', {})
@@ -177,9 +183,6 @@ class MargoSingleton(object):
 
 		view.run_command('margo_render_src', {'src': res_src})
 
-	def on_pre_save(self, view):
-		self.fmt(view)
-
 	def on_post_save(self, view):
 		self.send(view=view, action=actions.ViewSaved)
 
@@ -188,6 +191,9 @@ class MargoSingleton(object):
 
 	def on_close(self, view):
 		self.send(view=view, action=actions.ViewClosed)
+
+	def example_extension_file(self):
+		return gs.dist_path('src/disposa.blue/margo/extension-example/extension-example.go')
 
 	def extension_file(self, install=False):
 		src_dir = gs.user_path('src', 'margo')
@@ -203,7 +209,7 @@ class MargoSingleton(object):
 		try:
 			gs.mkdirp(src_dir)
 			with open('%s/margo.go' % src_dir, 'x') as f:
-				s = open(gs.dist_path('src/disposa.blue/margo/extension-example/extension-example.go'), 'r').read()
+				s = open(self.example_extension_file(), 'r').read()
 				f.write(s)
 		except FileExistsError:
 			pass
