@@ -204,20 +204,24 @@ def gs_init(_={}):
 	root_dir = gs.dist_path()
 	bs_fn = gs.file_path('gosubl/sh-bootstrap.go')
 	bs_exe = gs.file_path('bin/gosubl-sh-bootstrap.exe')
-	cmd = ShellCommand('go build -o %s %s' % (bs_exe, bs_fn))
-	cmd.wd = root_dir
-	cr = cmd.run()
-	if cr.exc or cr.err:
-		_print('error building %s: %s' % (bs_fn, cr.exc or cr.err))
 
-	cmd = ShellCommand(bs_exe)
-	cmd.wd = root_dir
-	cr = cmd.run()
+	def run(cmd_str):
+		cmd = ShellCommand(cmd_str)
+		cmd.wd = root_dir
+		return cmd.run()
+
+	cr = run(bs_exe)
+	if cr.exc or cr.err:
+		cr = run('go build -o %s %s' % (bs_exe, bs_fn))
+		if cr.exc or cr.err:
+			_print('error building %s: %s' % (bs_fn, cr.exc or cr.err))
+
+		cr = run(bs_exe)
+		if cr.exc or cr.err:
+			_print('error running %s: %s' % (bs_exe, cr.exc or cr.err))
+
 	raw_ver = ''
 	ver = ''
-	if cr.exc or cr.err:
-		_print('error running %s: %s' % (bs_exe, cr.exc or cr.err))
-
 	for ln in cr.out.split('\n'):
 		ln = ln.strip()
 		if not ln:
@@ -395,6 +399,8 @@ def env(m={}):
 	if not e.get('GOPATH'):
 		gp = os.path.expanduser('~/go')
 		e['GOPATH'] = gp
+		# we're posssibly racing with gs_init() so don't overwrite any existing value
+		_env_ext.setdefault('GOPATH', gp)
 		_print('GOPATH is not set... setting it to the default: %s' % gp)
 
 	# Ensure no unicode objects leak through. The reason is twofold:
