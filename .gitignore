@@ -14,3 +14,9 @@ Packages/User/Package\ Control.merged-ca-bundle
 **.cache
 Packages/User/Package Control.merged-ca-bundle
 Packages/User/oscrypto-ca-bundle.crt
+
+Packages/User/GoSublime-aux.sublime-settings
+Packages/GoSublime/GoSublime.sublime-settings
+Packages/GoSublime/Default\ \(OSX\).sublime-keymap
+Packages/Godef/Default\ \(OSX\).sublime-mousemap
+Packages/Godef/Godef.sublime-settings
