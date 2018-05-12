@@ -1,0 +1,8 @@
+[
+	{
+		"button": "button1",
+		"modifiers": ["alt"],
+		"press_command": "drag_select",
+		"command": "godef"
+	}
+]
