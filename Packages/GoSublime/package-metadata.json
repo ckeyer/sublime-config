@@ -1,1 +1,1 @@
-{"version": "2018.04.30.09.01.28", "dependencies": [], "platforms": ["*"], "description": "A Golang plugin collection for SublimeText 3, providing code completion and other IDE-like features.", "sublime_text": "*", "url": "https://github.com/DisposaBoy/GoSublime"}
+{"description": "A Golang plugin collection for SublimeText 3, providing code completion and other IDE-like features.", "sublime_text": ">=3000", "version": "18.05.19", "platforms": ["*"], "url": "https://github.com/DisposaBoy/GoSublime", "dependencies": []}
