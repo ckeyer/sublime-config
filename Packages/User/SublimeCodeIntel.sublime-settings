@@ -1,17 +1,25 @@
 {
    "codeintel_language_settings": {
         "Python3": {
-            "python3": "/Library/Frameworks/Python.framework/Versions/3.5/bin/python3",
+            "python3": "/usr/local/bin/python3",
             "codeintel_scan_extra_dir": [
                 "/Applications/Sublime Text.app/Contents/MacOS",
                 "~/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/arch",
                 "~/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/libs",
-                "/Library/Frameworks/Python.framework/Versions/3.5/lib",
-                "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5",
-                "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages"
+                "/usr/local/homebraw/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib",
+                "/usr/local/homebraw/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7",
+                "/usr/local/homebraw/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages",
+                "~/code/py"
             ],
             "codeintel_scan_files_in_project": true,
             "codeintel_selected_catalogs": []
+        },
+        "PHP": {
+            "php": "/usr/bin/php",
+            "phpExtraPaths": [
+                "~/gitlab.com/funxdata/pms/admin-api",
+                "~/gitlab.com/funxdata/pms/client-api"
+            ]
         }
     }
 }

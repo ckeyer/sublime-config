@@ -1,7 +1,16 @@
 {
+	"autoimport": true,
+	"debug": false,
 	"enable_auto_align": true,
-	"format_on_save": true,
+	"format_on_save": false,
 	"indent_with_space": 4,
-	"version": 3,
-	"visibility_order": true
+	"psr1": false,
+	"psr1_naming": "psr1",
+	"psr2": true,
+	"readini": false,
+	"skip_if_ini_missing": false,
+	"smart_linebreak_after_curly": true,
+	"version": 1,
+	"visibility_order": false,
+	"yoda": true
 }
