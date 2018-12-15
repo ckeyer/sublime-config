@@ -7,6 +7,10 @@
 	[
 		"go run flushreader.go"
 	],
+	"9o.hist./tmp":
+	[
+		"go run main.go"
+	],
 	"ann": "a18.07.31-1",
 	"install_version": "r18.07.22-1",
 	"version": "r18.07.22-1"
