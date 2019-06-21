@@ -6,6 +6,9 @@
         "GOROOT": "/usr/local/go",
         "GOPATH": "/Users/ckeyer/go"
 	},
+	"gscomplete_enabled": true,
+	"comp_lint_enabled": true,
+	"fmt_enabled": true,
 	"fmt_cmd": ["goimports"],
 	"ipc_timeout": 3,
 	"autocomplete_suggest_imports": true,

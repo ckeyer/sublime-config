@@ -1,4 +1,0 @@
-Changes in 0.1.2
-================
-
- - Github added 'bin' directory to the .gitignore file so binaries for phpmd werent in the repo, added them.

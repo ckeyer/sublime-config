@@ -1,4 +1,0 @@
-Changes in 0.1.4
-================
-
- - Added PHP Copy & Paste code detector as linter and standalone command
