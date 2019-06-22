@@ -1,5 +1,9 @@
 [
 	{
+		"keys": ["super+.", "super+x"],
+		"command": "margo_open_extension",
+	},
+	{
 		"keys": ["super+.", "super+1"],
 		"command": "open_file",
 		"args": { "file": "${packages}/GoSublime/README.md" }
@@ -24,22 +28,24 @@
 		"args": { "file": "${packages}/User/GoSublime.sublime-settings" }
 	},
 	{
-		"keys": ["ctrl+c", "ctrl+a"],
+		"keys": ["super+.", "super+p"],
 		"command": "gs_palette",
 		"args": {"palette": "imports", "direct": true},
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 	{
-		"keys": ["super+r"],
+		"keys": ["super+.", "super+d"],
 		"command": "gs_palette",
 		"args": {"palette": "declarations", "direct": true},
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 	{
-		"keys": ["ctrl+c", "ctrl+e"],
-		"command": "gs_palette",
-		"args": {"palette": "errors", "direct": true},
-		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
+		"keys": ["super+.", "super+e"],
+		"command": "margo_issues",
+	},
+	{
+		"keys": ["super+.", "super+c"],
+		"command": "margo_user_cmds",
 	},
 	{
 		"keys": ["super+.", "super+["],
@@ -48,13 +54,13 @@
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 	{
-		"keys": ["ctrl+c", "ctrl+i"],
+		"keys": ["super+.", "super+i"],
 		"command": "gs_palette",
 		"args": {"palette": "jump_to_imports"},
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 	{
-		"keys": ["ctrl+c", "ctrl+b"],
+		"keys": ["super+.", "super+b"],
 		"command": "gs9o_build",
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
@@ -62,12 +68,11 @@
 		"keys": ["super+.", "super+r"],
 		"command": "gs9o_open",
 		"args": {"run": ["replay"], "focus_view": false},
-		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 	{
-		"keys": ["ctrl+c", "ctrl+j"],
-		"command": "gs_doc",
-		"args": {"mode": "goto"},
+		"keys": ["super+.", "super+g"],
+		"command": "gs9o_open",
+		"args": {"run": [".actuate"], "focus_view": false, "show_view": false},
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 	{
@@ -88,8 +93,7 @@
 	},
 	{
 		"keys": ["super+.", "super+f"],
-		"command": "gs_fmt",
-		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
+		"command": "margo_fmt",
 	},
 	{
 		"keys": ["super+.", "super+n"],
@@ -114,9 +118,9 @@
 		"command": "gs_browse_files"
 	},
 	{
-		"keys": ["ctrl+c", "ctrl+t"],
-		"command": "gs_test",
-		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
+		"keys": ["super+.", "super+t"],
+		"command": "margo_user_cmds",
+		"args": {"action": "QueryTestCmds"},
 	},
 	{
 		"keys": ["super+.", "shift+space"],
@@ -125,7 +129,15 @@
 	},
 	{
 		"keys": ["super+9"],
-		"command": "gs9o_open"
+		"command": "gs9o_win_open"
+	},
+		{
+		"keys": ["super+.","super+9"],
+		"command": "gs9o_win_open"
+	},
+	{
+		"keys": ["super+.","super+0"],
+		"command": "margo_show_hud"
 	},
 	{
 		"keys": ["shift+space"],

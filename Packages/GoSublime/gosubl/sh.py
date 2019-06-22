@@ -48,11 +48,6 @@ class _command(object):
 		else:
 			input = None
 
-		try:
-			setsid = os.setsid
-		except Exception:
-			setsid = None
-
 		out = ''
 		err = ''
 		exc = None
@@ -82,7 +77,7 @@ class _command(object):
 				shell=False,
 				env=nv,
 				cwd=wd,
-				preexec_fn=setsid,
+				start_new_session=True,
 				bufsize=0
 			)
 		except Exception as e:
@@ -206,12 +201,13 @@ def gs_init(_={}):
 	bs_fn = gs.file_path('gosubl/sh-bootstrap.go')
 	bs_exe = gs.file_path('bin/gosubl-sh-bootstrap.exe')
 
-	def run(cmd_str):
+	def run(cmd_str, *, env={}):
 		cmd = ShellCommand(cmd_str)
 		cmd.wd = root_dir
+		cmd.env = env
 		return cmd.run()
 
-	cr = run('go build -o %s %s' % (bs_exe, bs_fn))
+	cr = run('go build -o %s %s' % (bs_exe, bs_fn), env={'GO111MODULE': 'off'})
 	if cr.exc or cr.err:
 		_print('error building %s: %s' % (bs_fn, cr.exc or cr.err))
 
@@ -321,6 +317,8 @@ def env(m={}):
 		m = m.copy()
 		del m['PATH']
 
+	add_path.append(gs.dist_path('bin'))
+	add_path.append(gs.user_path('bin'))
 	add_path.append(bin_dir())
 
 	e = st_environ.copy()

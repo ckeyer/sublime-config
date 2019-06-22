@@ -11,7 +11,7 @@
 	[
 		"go run main.go"
 	],
-	"ann": "a18.07.31-1",
-	"install_version": "r18.07.22-1",
-	"version": "r18.07.22-1"
+	"ann": "a19.06.16-1",
+	"install_version": "r19.06.16-1",
+	"version": "r19.06.16-1"
 }
