@@ -251,7 +251,7 @@
 					"text": "func http handler",
 					"title": "func(rw, req)",
 					"value": "func ${1:name}(rw http.ResponseWriter, req *http.Request) {\n\t$0\n}"
-				}
+				},
 			]
 		},
 		{
@@ -261,7 +261,7 @@
 					"text": "func (*${typename})",
 					"title": "func (...) {...}",
 					"value": "func (${1:${typename_abbr}} ${2:*}${typename}) ${3:name}($4)$5 {\n\t$0\n}"
-				}
+				},
 			]
 		},
 		{
