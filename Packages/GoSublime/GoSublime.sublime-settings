@@ -24,7 +24,7 @@
 	// /bin/sh which in most cases is not what you want
 	//
 	// the special entry "$CMD" is replaced by the actual command
-	"shell": [],
+	"shell": ["/bin/zsh"],
 
 	// whether or not pkg files should be automatically saved when necessary (e.g. when running 9o `replay` or `go test` commands)
 	"autosave": true,

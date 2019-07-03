@@ -25,5 +25,39 @@
     {
         "keys": ["super+shift+,"],
         "command": "ace_jump_within_line"
-    }
+    },
+    {
+        "keys": ["ctrl+c", "ctrl+a"],
+        "command": "gs_palette",
+        "args": {"palette": "imports", "direct": true},
+        "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
+    },
+    {
+        "keys": ["ctrl+c", "ctrl+e"],
+        "command": "gs_palette",
+        "args": {"palette": "errors", "direct": true},
+        "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
+    },
+    {
+        "keys": ["ctrl+c", "ctrl+i"],
+        "command": "gs_palette",
+        "args": {"palette": "jump_to_imports"},
+        "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
+    },
+    {
+        "keys": ["ctrl+c", "ctrl+b"],
+        "command": "gs9o_build",
+        "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
+    },
+    {
+        "keys": ["ctrl+c", "ctrl+j"],
+        "command": "gs_doc",
+        "args": {"mode": "goto"},
+        "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
+    },
+    {
+        "keys": ["ctrl+c", "ctrl+t"],
+        "command": "gs_test",
+        "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
+    },
 ]

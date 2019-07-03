@@ -41,11 +41,8 @@
 	},
 	{
 		"keys": ["super+.", "super+e"],
+		"command": "gs_palette",
 		"command": "margo_issues",
-	},
-	{
-		"keys": ["super+.", "super+c"],
-		"command": "margo_user_cmds",
 	},
 	{
 		"keys": ["super+.", "super+["],
@@ -68,11 +65,12 @@
 		"keys": ["super+.", "super+r"],
 		"command": "gs9o_open",
 		"args": {"run": ["replay"], "focus_view": false},
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 	{
 		"keys": ["super+.", "super+g"],
-		"command": "gs9o_open",
-		"args": {"run": [".actuate"], "focus_view": false, "show_view": false},
+		"command": "gs_doc",
+		"args": {"mode": "goto"},
 		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 	{
@@ -119,8 +117,8 @@
 	},
 	{
 		"keys": ["super+.", "super+t"],
-		"command": "margo_user_cmds",
-		"args": {"action": "QueryTestCmds"},
+		"command": "gs_test",
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }]
 	},
 	{
 		"keys": ["super+.", "shift+space"],
@@ -129,15 +127,7 @@
 	},
 	{
 		"keys": ["super+9"],
-		"command": "gs9o_win_open"
-	},
-		{
-		"keys": ["super+.","super+9"],
-		"command": "gs9o_win_open"
-	},
-	{
-		"keys": ["super+.","super+0"],
-		"command": "margo_show_hud"
+		"command": "gs9o_open"
 	},
 	{
 		"keys": ["shift+space"],

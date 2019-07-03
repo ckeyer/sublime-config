@@ -3,6 +3,26 @@
 	[
 		"go run"
 	],
+	"9o.hist./Users/ckeyer/go/src/git.funxdata.com/funxcloud/exporter/cmd":
+	[
+		"zsh"
+	],
+	"9o.hist./Users/ckeyer/go/src/git.funxdata.com/simba":
+	[
+		"go install ./...",
+		"cd simba"
+	],
+	"9o.hist./Users/ckeyer/go/src/git.funxdata.com/simba/proxy_pool":
+	[
+		"cd .."
+	],
+	"9o.hist./Users/ckeyer/go/src/git.funxdata.com/simba/proxy_pool/cmd":
+	[
+		"go install ./...",
+		"go install",
+		"cd ..",
+		"cd ..."
+	],
 	"9o.hist./Users/ckeyer/go/src/test":
 	[
 		"go run flushreader.go"
