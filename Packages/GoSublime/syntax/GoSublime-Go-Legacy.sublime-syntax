@@ -1,8 +1,8 @@
 %YAML 1.2
 ---
-name: "GoSublime: Go (Deprecated)"
+name: "GoSublime: Go (Legacy)"
 comment: Based on work from github.com/frou/GoFeather and github.com/DisposaBoy/GoSublime
-hidden: false
+hidden: true
 first_line_match: "-[*]-( Mode:)? Go -[*]-"
 scope: source.go
 contexts:
@@ -64,7 +64,7 @@ contexts:
       scope: keyword.control.go
     - match: \b(break|case|chan|const|continue|default|defer|else|fallthrough|for|func|go|goto|if|import|interface|map|package|range|return|select|struct|switch|type|var)\b
       scope: keyword.other.go
-    - match: '(?:[[:alpha:]_][[:alnum:]_]*)(?:(,):\s+[[:alpha:]_][[:alnum:]_]*)*\s*(:=)'
+    - match: '(?:[[:alpha:]_][[:alnum:]_]*)(?:,\s+[[:alpha:]_][[:alnum:]_]*)*\s*(:=)'
       comment: This matches the 'x := 0' style of variable declaration.
       scope: meta.initialization.short.go
       captures:
@@ -90,7 +90,7 @@ contexts:
       scope: keyword.operator.go
     - match: '<-'
       scope: keyword.operator.channel.go
-    - match: '[-+|^*/%&]=|<<=|>>=|&^='
+    - match: '[+-|^*/%&]=|<<=|>>=|&^='
       scope: keyword.operator.assignment.go
     - match: '&^|<<|>>'
       scope: keyword.operator.arithmetic.go

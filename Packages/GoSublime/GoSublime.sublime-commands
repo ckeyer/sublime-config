@@ -27,10 +27,6 @@
 		"command": "margo_issues",
 	},
 	{
-		"caption": "GoSublime: User Commands",
-		"command": "margo_user_cmds",
-	},
-	{
 		"caption": "GoSublime: Go to last bookmark",
 		"command": "gs_palette",
 		"args": {"palette": "jump_back"}
@@ -64,8 +60,8 @@
 	},
 	{
 		"caption": "GoSublime: Goto Definition",
-		"command": "gs9o_open",
-		"args": {"run": ["goto.definition"], "focus_view": false, "show_view": false},
+		"command": "gs_doc",
+		"args": {"mode": "goto"}
 	},
 	{
 		"caption": "GoSublime: Show documentation hint",

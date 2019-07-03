@@ -16,15 +16,16 @@ func main() {
 	m := reVer.FindStringSubmatch(rawVer)
 	ver := reClean.ReplaceAllString(m[1], "..")
 	env := map[string]string{
-		"GOROOT": build.Default.GOROOT,
-		"GOPATH": build.Default.GOPATH,
-		"PATH":   os.Getenv("PATH"),
+		"GOROOT":      build.Default.GOROOT,
+		"GOPATH":      build.Default.GOPATH,
+		"GOBIN":       os.Getenv("GOBIN"),
+		"PATH":        os.Getenv("PATH"),
+		"CGO_ENABLED": os.Getenv("CGO_ENABLED"),
 	}
-	varPat := regexp.MustCompile(`^((?:MARGO|GO|CGO)\w+)=(.+)$`)
 	for _, s := range os.Environ() {
-		m := varPat.FindStringSubmatch(s)
-		if len(m) == 3 {
-			env[m[1]] = m[2]
+		l := strings.SplitN(s, "=", 2)
+		if len(l) == 2 && strings.HasPrefix(l[0], "MARGO_") {
+			env[l[0]] = l[1]
 		}
 	}
 

@@ -6,7 +6,6 @@
 package main
 
 import (
-	"bytes"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -19,7 +18,6 @@ type dlFile struct {
 	name string
 	url  string
 	dirs []string
-	filt func(s []byte) []byte
 }
 
 func main() {
@@ -38,9 +36,6 @@ func main() {
 			name: "Go.sublime-syntax",
 			url:  "https://raw.githubusercontent.com/sublimehq/Packages/master/Go/Go.sublime-syntax",
 			dirs: []string{"."},
-			filt: func(s []byte) []byte {
-				return bytes.Replace(s, []byte("name: Go"), []byte("name: 'GoSublime: Go (Copy)'"), -1)
-			},
 		},
 	}
 	for _, f := range urls {
@@ -67,10 +62,6 @@ func dl(f dlFile) {
 	if err != nil {
 		fmt.Println(err)
 		return
-	}
-
-	if f.filt != nil {
-		content = f.filt(content)
 	}
 
 	for _, dir := range f.dirs {

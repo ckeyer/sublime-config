@@ -7,8 +7,6 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"TypeScript",
-		"TypeScript Syntax",
 		"Vintage"
 	],
 	"index_files": true,
